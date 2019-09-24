@@ -1,7 +1,7 @@
 .footer {
   margin-top: auto;
   background: var(--offWhite);
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
   color: var(--mainWhite);
 }
@@ -19,7 +19,7 @@
 }
 
 .brand {
-  margin: 4rem 1rem 1rem 1rem;
+  margin: 4rem 0 1rem 0;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -30,7 +30,7 @@
   text-decoration: none;
   text-transform: uppercase;
   color: var(--mainBlackText);
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 0;
   font-size: 0.9rem;
   letter-spacing: var(--mainSpacing);
   transition: var(--mainTransition);
@@ -50,7 +50,7 @@
   color: var(--primaryColor);
 }
 .copyright {
-  margin: 1rem;
+  margin: 1rem 0;
   text-transform: capitalize;
   font-weight: 300;
   font-size: 0.6rem;
@@ -63,6 +63,6 @@
 .brand p {
   color: var(--mainBlackText);
   font-size: 0.8rem;
-  margin: 1rem 0 0;
+  margin: 1rem 0 0 0;
   text-align: left;
 }

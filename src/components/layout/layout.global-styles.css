@@ -1,21 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Asap&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,900&display=swap');
 
 :root {
   --primaryColor: #16b186;
   --mainWhite: #fff;
   --offWhite: linear-gradient(180deg,#f7f6f9 0,#fff 100%);
-  --mainBlack: #131726;
+  --mainBlack: #233748;
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
-  --mainBlackText: #233748;
+  --mainBlackText: #131726;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.5px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
-
-
 
 * {
   margin: 0;
@@ -24,7 +21,7 @@
 }
 
 body {
-  font-family: "Muli", sans-serif;
+  font-family: "Nunito", sans-serif;
   color: var(--mainText);
   background: var(--mainBlack);
   line-height: 1.4;
@@ -36,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Asap", sans-serif;
+  font-family: "Nunito", sans-serif;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }
@@ -86,6 +83,7 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .rich {

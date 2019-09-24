@@ -8,17 +8,18 @@ const RoundButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
+  margin: ${props => props.nav ? '0' : '1rem'};
   width: ${props => props.big ? '60px' : '48px'};
   height: ${props => props.big ? '60px' : '48px'};
   border-radius: 50%;
   color: white;
   border: 2px ${primaryColor} solid;
-  position: ${props => props.floating ? 'absolute' : 'static'};
+  position: ${props => props.floating ? 'fixed' : 'static'};
   bottom: 0.5rem;
   right: 0.5rem;
   box-shadow: 0px 18px 38px -12px rgba(0,0,0,0.35);
   transition: all 0.25s ease-in;
+  z-index: 9999;
   :hover {
     color: ${primaryColor};
     border-color: ${primaryColor};
