@@ -8,6 +8,8 @@ const Boton = ({ className, title }) => {
 export default styled(Boton)`
   padding: 0.9rem 1.6rem;
   text-transform: capitalize;
+  font-size: 0.9rem;
+  font-weight: 400;
   letter-spacing: 0.5px;
   background: #16b186;
   color: #fff;

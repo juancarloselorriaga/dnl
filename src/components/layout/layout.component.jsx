@@ -3,7 +3,6 @@ import React from "react"
 import Navbar from "../navbar/navbar.component"
 import Footer from "../footer/footer.component"
 import RoundButton from "../round-button/round-button.component"
-import Spacer from '../spacer/spacer.component'
 
 import { FaComments } from "react-icons/fa"
 

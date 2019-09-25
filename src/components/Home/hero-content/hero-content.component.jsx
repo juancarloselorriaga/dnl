@@ -3,18 +3,16 @@ import styled from "styled-components"
 import Particles from "react-particles-js"
 
 import Boton from "../../boton/boton.component"
+import HeroTitle from '../../hero-title/hero-title.component'
 
 const HeroContent = ({ className }) => {
   return (
     <div className={className}>
-      <h1>El apoyo en marketing que necesitas hoy.</h1>
-      <span>
-        El método de DNL es único y te posicionamos increíblemente rápido.
-      </span>
-      <div>
+      <HeroTitle title="El apoyo en marketing que necesitas hoy." subtitle="El método de DNL es único y te posicionamos increíblemente rápido." />
+      <div className='button-wrapper'>
         <Boton title="¡Conócenos!" />
       </div>
-      <div>
+      <div className='particles-wrapper'>
         <Particles params={{
           "retina_detect": true
         }} />
@@ -25,20 +23,7 @@ const HeroContent = ({ className }) => {
 }
 
 export default styled(HeroContent)`
-  color: white;
-  h1,
-  span {
-    letter-spacing: 0.12rem;
-  }
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-  }
-  span {
-    font-size: 1.9rem;
-    font-weight: 300;
-  }
-  div {
+  .particles-wrapper, .button-wrapper {
     margin-top: 1.5rem;
   }
 `

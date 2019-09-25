@@ -1,0 +1,27 @@
+.area {
+  margin: 2rem 0 1rem 0;
+  padding-bottom: 1rem;
+  text-align: center;
+  border-bottom: 0.5px rgb(0,0,0,0.3) solid;
+}
+.area span {
+  color: var(--primaryColor);
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+.area a {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin: 1rem;
+  color: var(--primaryColor);
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}

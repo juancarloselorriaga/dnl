@@ -53,6 +53,9 @@ const Footer = () => {
         marca registrada &copy; desarrollo de negocios lomas{" "}
         {new Date().getFullYear()} todos los derechos reservados.
       </div>
+      <div className={styles.avisoDePrivacidad}>
+        <a href="/"><span>Aviso de privacidad</span></a>
+      </div>
     </footer>
   )
 }

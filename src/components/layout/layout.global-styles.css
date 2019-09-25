@@ -3,7 +3,7 @@
 :root {
   --primaryColor: #16b186;
   --mainWhite: #fff;
-  --offWhite: linear-gradient(180deg,#f7f6f9 0,#fff 100%);
+  --offWhite:  #f7f6f9;  /* linear-gradient(180deg,#f7f6f9 0,#fff 100%); */
   --mainBlack: #233748;
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
@@ -12,6 +12,8 @@
   --mainSpacing: 0.5px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --smoothSmallShadow: 0px 3px 10px rgba(0,0,0,0.12);
+  --smoothShadow: 0px 18px 40px -12px rgba(0,0,0,0.35)
 }
 
 * {
@@ -22,7 +24,7 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  color: var(--mainText);
+  color: var(--mainBlack);
   background: var(--mainBlack);
   line-height: 1.4;
   font-size: 1rem;
@@ -69,7 +71,8 @@ a {
 .btn-primary {
   background: var(--primaryColor);
   color: var(--mainWhite);
-  border: 50% solid var(--primaryColor);
+  border: 2px solid var(--primaryColor);
+  border-radius: 11px;
 }
 .btn-primary:hover {
   background: transparent;

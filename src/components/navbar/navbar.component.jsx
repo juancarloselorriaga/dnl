@@ -17,7 +17,7 @@ const Navbar = () => {
 
   useEffect(() => {
     window.onscroll = () => {
-      window.pageYOffset > 25 ? setOnTop(false) : setOnTop(true)
+      window.pageYOffset > 50 ? setOnTop(false) : setOnTop(true)
     }
   }, [])
 
@@ -32,7 +32,7 @@ const Navbar = () => {
           className={`${styles.navHeader} ${styles.sticky}`}
           style={
             isOnTop && !isOpen
-              ? { background: "#233748" }
+              ? { background: "transparent" }
               : isOpen
               ? { background: "white" }
               : {
@@ -42,9 +42,9 @@ const Navbar = () => {
           }
         >
           {isOnTop && !isOpen ? (
-            <img src={Logo} alt="backroads logo" />
+            <img src={Logo} alt="dnl logo" />
           ) : (
-            <img src={LogoColors} alt="backroads logo" />
+            <img src={LogoColors} alt="dnl logo" />
           )}
           <RoundButton nav onClick={toggleNav}>
             <FaBars />

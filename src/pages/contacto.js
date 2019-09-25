@@ -1,7 +1,19 @@
-import React from 'react'
+import React from "react"
 
 import Layout from "../components/layout/layout.component"
+import Hero from "../components/hero/hero.component"
+import HeroTitle from '../components/hero-title/hero-title.component'
+import Subscribe from '../components/subscribe/subscribe.component'
+import Contacto from '../components/contacto/contacto.component'
 
 export default () => {
-  return <Layout>Hola soy la página de contacto</Layout>
+  return (
+    <Layout>
+      <Hero>
+        <HeroTitle title="Ya trabajamos con varias marcas, nos encantaría ayudarte a ti."/>
+      </Hero>
+      <Contacto />
+      <Subscribe />
+    </Layout>
+  )
 }

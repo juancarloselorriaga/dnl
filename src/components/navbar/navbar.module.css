@@ -49,6 +49,7 @@
   opacity: 1;
   margin-top: 80px;
   background: var(--mainWhite);
+  border-bottom: 0.5px var(--mainGrey) solid;
 }
 .nav-links a {
   display: block;

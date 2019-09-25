@@ -1,23 +1,25 @@
 import React from "react"
-import { FaWallet, FaTree, FaSocks } from "react-icons/fa"
+import legal from '../../assets/icons/Legal.png'
+import web from '../../assets/icons/WebIcon.png'
+import synergy from '../../assets/icons/SynergyIcon.png'
 
 export default [
   {
-    icon: <FaWallet />,
-    title: "saving money",
+    icon: <img src={legal} alt='dnl legal' />,
+    title: "DNL Legal",
     text:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, earum. ",
+      "Dreamcatcher intelligentsia roof party woke shaman, green juice la croix kogi selvage.",
   },
   {
-    icon: <FaTree />,
-    title: "endless hiking",
+    icon: <img src={web} alt='dnl web' />,
+    title: "DNL Web",
     text:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, earum. ",
+      "Jianbing cloud bread cardigan taxidermy poke, eytar copper mug truffaut live-edge",
   },
   {
-    icon: <FaSocks />,
-    title: "amazing comfort",
+    icon: <img src={synergy} alt='dnl synergy' />,
+    title: "DNL Synergy",
     text:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, earum. ",
+      "Synth tbh copper mug gentrify. Tattooed occupy meggings yuccie snackwave meh pinterest seitan. ",
   },
 ]

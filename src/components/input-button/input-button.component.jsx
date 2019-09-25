@@ -1,0 +1,48 @@
+import React from "react"
+import styled from 'styled-components'
+
+import { FaChevronCircleRight } from 'react-icons/fa'
+
+const InputButton = ({className, handleSend, onChange}) => {
+  return (
+    <div className={className}>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        className="form-control"
+        placeholder="tu-email@dnl.mx"
+        onChange={onChange}
+      />
+      <div className='button' onClick={handleSend}>
+        <FaChevronCircleRight size="20" />
+      </div>
+    </div>
+  )
+}
+
+export default styled(InputButton)`
+  display: flex;
+  align-items: stretch;
+  margin-top: 2rem;
+  border-radius: 11px;
+  .form-control {
+    width: 80%;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 11px
+  }
+  .button {
+    width: 20%;
+    background-color: var(--primaryColor);
+    color: var(--mainWhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    
+  }
+`
