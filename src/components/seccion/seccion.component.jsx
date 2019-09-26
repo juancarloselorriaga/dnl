@@ -27,7 +27,7 @@ const Seccion = ({ children, className, arched }) => {
 
 export default styled(Seccion)`
   .normal {
-    padding: 4rem 0;
+    padding: ${props => props.extraBottom ? "8rem 0" : "4rem 0"};
     background: ${props =>
       props.white
         ? "var(--mainWhite)"
@@ -41,8 +41,6 @@ export default styled(Seccion)`
     background: var(--offWhite);
     text-align: center;
     background-color: var(--mainWhite);
-    /* border-top-left-radius: 200px;
-    border-top-right-radius: 200px; */
     padding-bottom: ${props => (props.footer ? "0" : "4rem")};
   }
   #curveUpColor path {
@@ -61,5 +59,8 @@ export default styled(Seccion)`
   }
   .svg {
     display: block;
+    margin-top: -100px;
+    position: relative;
+    z-index: 30;
   }
 `

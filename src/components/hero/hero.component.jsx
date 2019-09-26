@@ -7,28 +7,32 @@ const Hero = ({ children, className, img }) => {
     <section className={className}>
       {img ? (
         <BackgroundImage
-          className={className}
-          fluid={img}
+          className='background-image'
+          fluid={img.fluid}
         >
-          {children}
+        <div className='children'>{ children }</div>
         </BackgroundImage>
       ) : (
-        <Fragment>{ children }</Fragment>
+        <div className='children'>{ children }</div>
       )}
     </section>
   )
 }
 
 export default styled(Hero)`
-  min-height: ${props => (props.home ? "calc(100vh - 80px)" : "50vh")};
-  background: ${props => props.home && "#233748"};
-  background-position: center;
+  min-height: calc(100vh - 80px);
+  background-position: top;
   background-size: cover;
   opacity: 1 !important;
   display: flex;
   justify-content: ${props => (props.home ? "flex-start" : "center")};
-
   align-items: ${props => (props.home ? "flex-start" : "center")};
-  margin-top: 80px;
-  padding: 0rem 1.3rem 4rem 1.3rem;
+  .children {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+    padding: ${props => props.extraBottom ? "0rem 1.3rem 8rem 1.3rem" : "0rem 1.3rem 4rem 1.3rem"};
+    display: flex;
+    justify-content: ${props => (props.centered ? "center" : "flex-start")};
+    align-items: ${props => (props.centered ? "center" : "flex-start")};
+  }
 `

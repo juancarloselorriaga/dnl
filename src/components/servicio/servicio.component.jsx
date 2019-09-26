@@ -1,17 +1,18 @@
 import React from "react"
 import styled from "styled-components"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import { FaLongArrowAltRight } from "react-icons/fa"
 
-const Servicio = ({ children, text, title, className }) => {
+const Servicio = ({ children, text, title, slug, className }) => {
   return (
     <article className={className}>
       <div className="icon-wrapper">{children}</div>
       <p>{text}</p>
-      <a href="/">
+      <AniLink fade className="link" to={`/areas/${slug}`}>
         <span>{title}</span>
         <FaLongArrowAltRight />
-      </a>
+      </AniLink>
     </article>
   )
 }
@@ -27,7 +28,7 @@ export default styled(Servicio)`
     display: inline-block;
   }
 
-  a {
+  .link {
     width: 100%;
     display: inline-flex;
     align-items: center;

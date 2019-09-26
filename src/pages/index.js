@@ -12,7 +12,7 @@ import Subscribe from '../components/subscribe/subscribe.component'
 export default () => {
   return (
     <Layout>
-      <Hero home="true">
+      <Hero extraBottom home="true">
         <HeroContent />
       </Hero>
       <About />

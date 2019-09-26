@@ -20,7 +20,7 @@ const getAreas = graphql`
           resumen {
             resumen
           }
-          img: imagen {
+          img: logo {
             fixed(width: 100, height: 100) {
           ...GatsbyContentfulFixed_tracedSVG
         }
@@ -49,6 +49,7 @@ const Areas = () => {
               key={node.id}
               title={node.title}
               text={node.resumen.resumen}
+              slug={node.slug}
             >
             <Img fixed={node.img.fixed} />
             </Servicio>

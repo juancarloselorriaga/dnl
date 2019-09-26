@@ -44,7 +44,7 @@ const Subscribe = ({ className }) => {
 
 export default styled(Subscribe)`
   background: var(--mainBlack);
-  padding: 4rem 1.3rem;
+  padding: ${props => !props.noBottom ? "8rem 1.3rem" : "4rem 1.3rem"};
 
   .title-wrapper h2,
   .subscribe h2 {

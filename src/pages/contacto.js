@@ -10,8 +10,8 @@ import Direccion from '../components/direccion/direccion.component'
 export default () => {
   return (
     <Layout>
-      <Hero>
-        <HeroTitle title="Ya trabajamos con varias marcas, nos encantaría ayudarte a ti."/>
+      <Hero centered>
+        <HeroTitle smaller centered title="Ya trabajamos con varias marcas, nos encantaría ayudarte a ti."/>
       </Hero>
       <Contacto />
       <Direccion />
