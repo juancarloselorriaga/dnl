@@ -35,4 +35,9 @@ export default styled(Hero)`
     justify-content: ${props => (props.centered ? "center" : "flex-start")};
     align-items: ${props => (props.centered ? "center" : "flex-start")};
   }
+  .background-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    opacity: 1 !important;
+  }
+
 `

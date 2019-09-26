@@ -24,7 +24,7 @@ color: white;
     font-weight: ${props => props.smaller ? '500' : "600"};
   }
   span {
-    font-size: 1.9rem;
+    font-size: ${props => props.smaller ? '1.3rem' : "1.9rem"};
     font-weight: 300;
     text-align: ${props => props.centered && 'center'};
   }

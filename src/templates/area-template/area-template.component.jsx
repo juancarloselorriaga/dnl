@@ -7,17 +7,15 @@ import Layout from "../../components/layout/layout.component"
 import Seccion from "../../components/seccion/seccion.component"
 import Center from "../../components/center/center.component"
 import Hero from "../../components/hero/hero.component"
+import HeroTitle from '../../components/hero-title/hero-title.component'
 
 const AreaTemplate = ({ data, className }) => {
   const { title, resumen, backgroundImage, logo } = data.area
 
   return (
     <Layout>
-      <Hero extraBottom img={backgroundImage} className={className}>
-        <div className="hero-content">
-          <h4>{title}</h4>
-          <span>{resumen.resumen}</span>
-        </div>
+      <Hero centered extraBottom img={backgroundImage} className={className}>
+        <HeroTitle centered smaller title={title} subtitle={resumen.resumen} />
       </Hero>
     </Layout>
   )
