@@ -1,17 +1,12 @@
 import React from "react"
 import styled from "styled-components"
-import Checkbox from "react-simple-checkbox"
+// import Checkbox from "react-simple-checkbox"
 
 const Decision = ({ handleCheckboxUpdate, isChecked, label, className }) => {
   return (
     <div className={className}>
       <div className="check-box">
-        <Checkbox
-          color="#16b186"
-          size="2"
-          checked={isChecked}
-          onChange={handleCheckboxUpdate}
-        />
+
       </div>
       <div className="label-wrapper">
         <label>{label}</label>
@@ -40,3 +35,10 @@ export default styled(Decision)`
     padding-top: 0.5rem;
   }
 `
+
+// <Checkbox
+// color="#16b186"
+// size="2"
+// checked={isChecked}
+// onChange={handleCheckboxUpdate}
+// />
