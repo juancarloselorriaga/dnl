@@ -8,28 +8,23 @@ import Seccion from "../../seccion/seccion.component"
 import Center from "../../center/center.component"
 import Servicio from "../../servicio/servicio.component"
 
-import styles from "./areas.module.css"
 
-const getImages = graphql`
-  query Image {
-    legal: file(relativePath: { eq: "legal.png" }) {
-      childImageSharp {
-        fixed(width: 100, height: 100) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+const getAreas = graphql`
+  query {
+    areas: allContentfulAreas {
+      edges {
+        node {
+          id: contentful_id
+          title
+          slug
+          resumen {
+            resumen
+          }
+          img: imagen {
+            fixed(width: 100, height: 100) {
+          ...GatsbyContentfulFixed_tracedSVG
         }
-      }
-    }
-    web: file(relativePath: { eq: "webIcon.png" }) {
-      childImageSharp {
-        fixed(width: 100, height: 100) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
-      }
-    }
-    synergy: file(relativePath: { eq: "synergyIcon.png" }) {
-      childImageSharp {
-        fixed(width: 100, height: 100) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+          }
         }
       }
     }
@@ -37,8 +32,9 @@ const getImages = graphql`
 `
 
 const Areas = () => {
-  const { legal, web, synergy } = useStaticQuery(getImages)
-
+  const response = useStaticQuery(getAreas)
+  const areas = response.areas.edges
+  
   return (
     <Seccion offWhite>
       <Title title="Una solución completa a tus necesidades" />
@@ -47,26 +43,17 @@ const Areas = () => {
         textSecond="Franzen meditation echo park jianbing, banjo chambray narwhal XOXO bushwick flexitarian."
       />
       <Center background>
-        <div className={styles.center}>
-          <Servicio
-            title="DNL Legal"
-            text="Dreamcatcher intelligentsia roof party woke shaman, green juice la croix kogi selvage."
-          >
-            <Img fixed={legal.childImageSharp.fixed} />
-          </Servicio>
-          <Servicio
-            title="DNL Web"
-            text="ianbing cloud bread cardigan taxidermy poke, eytar copper mug truffaut live-edge"
-          >
-            <Img fixed={web.childImageSharp.fixed} />
-          </Servicio>
-          <Servicio
-            title="DNL Synergy"
-            text="Synth tbh copper mug gentrify. Tattooed occupy meggings yuccie snackwave meh pinterest seitan. "
-          >
-            <Img fixed={synergy.childImageSharp.fixed} />
-          </Servicio>
-        </div>
+        {areas.map(({ node }) => {
+          return (
+            <Servicio
+              key={node.id}
+              title={node.title}
+              text={node.resumen.resumen}
+            >
+            <Img fixed={node.img.fixed} />
+            </Servicio>
+          )
+        })}
       </Center>
     </Seccion>
   )
