@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Title from "../title/title.component"
 import Card from "../card/card.component"
@@ -7,17 +8,37 @@ import Boton from "../boton/boton.component"
 import Seccion from "../seccion/seccion.component"
 import Center from "../center/center.component"
 
-import blogPosts from "../../data-temp/blog-posts"
+const getBlogPosts = graphql`
+  query {
+  blogPosts: allContentfulPosts{
+    edges {
+      node {
+        id: contentful_id
+        title
+        slug
+        content {
+          content
+        }
+        img: imagen {
+          fluid {
+            ...GatsbyContentfulFluid_tracedSVG
+          }
+        }
+      }
+    }
+  }
+}
+`
 
 const BlogPosts = ({ className }) => {
+  const response = useStaticQuery(getBlogPosts)
+  const blogPosts = response.blogPosts.edges
   return (
     <Seccion offWhite className={className}>
       <Title title="Noticias, anuncios y blog." />
       <Center>
-        {blogPosts.map(({ title, img, content }, index) => {
-          return (
-            <div key={index}></div>
-          )
+        {blogPosts.map(({ node }) => {
+          return <Card key={node.id} items={node} textoBoton="Leer más" />
         })}
       </Center>
       <div className="button-wrapper">
@@ -36,11 +57,3 @@ export default styled(BlogPosts)`
     width: 100%;
   }
 `
-
-// <Card
-//               key={index}
-//               title={title}
-//               img={img}
-//               content={content}
-//               textoBoton="Ver post"
-//             />
