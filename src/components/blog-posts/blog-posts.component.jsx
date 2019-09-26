@@ -16,13 +16,7 @@ const BlogPosts = ({ className }) => {
       <Center>
         {blogPosts.map(({ title, img, content }, index) => {
           return (
-            <Card
-              key={index}
-              title={title}
-              img={img}
-              content={content}
-              textoBoton="Ver post"
-            />
+            <div key={index}></div>
           )
         })}
       </Center>
@@ -42,3 +36,11 @@ export default styled(BlogPosts)`
     width: 100%;
   }
 `
+
+// <Card
+//               key={index}
+//               title={title}
+//               img={img}
+//               content={content}
+//               textoBoton="Ver post"
+//             />

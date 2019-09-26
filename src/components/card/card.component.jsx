@@ -1,15 +1,21 @@
 import React from "react"
 import styled from "styled-components"
+// import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 import { FaLongArrowAltRight } from "react-icons/fa"
 
-const Card = ({ className, title, img, content, textoBoton }) => {
+const Card = ({ className, items, textoBoton }) => {
+  const { title, content, img } = items
   return (
     <article className={className}>
-      <div className="card-media" background={img} />
+        <BackgroundImage
+          className='card-media'
+          fluid={img.fluid}
+        />
       <div className="card-content">
         <h5>{title}</h5>
-        <p>{content}</p>
+        <p>{content.content}</p>
       </div>
       <div className="card-action">
         <a href="/">
@@ -25,14 +31,11 @@ export default styled(Card)`
   margin: 2rem 0;
   border-radius: 11px;
   box-shadow: var(--smoothSmallShadow);
-  .card-media {
-    background-image: ${props => `url(${props.img})`};
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  .card-media, &:before {
     height: 150px;
     border-top-left-radius: 11px;
     border-top-right-radius: 11px;
+    overflow: hidden;
   }
 
   .card-content {
@@ -68,3 +71,5 @@ export default styled(Card)`
     color: #16b186;
   }
 `
+
+// <div className="card-media" background={img} />
