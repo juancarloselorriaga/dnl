@@ -6,7 +6,7 @@ import Seccion from "../../seccion/seccion.component"
 import Center from "../../center/center.component"
 import { FaLongArrowAltRight } from "react-icons/fa"
 
-import services from "../../../constants/services/services"
+import areas from "../../../constants/services/areas"
 
 import styles from "./areas.module.css"
 
@@ -20,7 +20,7 @@ const Areas = () => {
       />
       <Center background>
         <div className={styles.center}>
-          {services.map((item, index) => {
+          {areas.map((item, index) => {
             return (
               <article key={index} className={styles.area}>
                 <div className={styles.iconWrapper}>{item.icon}</div>

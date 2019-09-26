@@ -31,8 +31,8 @@ export default styled(InputButton)`
     padding: 0.7rem 1rem;
     font-size: 0.9rem;
     border: none;
-    border-top-left-radius: 11px;
-    border-bottom-left-radius: 11px
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
   }
   .button {
     width: 20%;
@@ -41,8 +41,8 @@ export default styled(InputButton)`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top-right-radius: 11px;
-    border-bottom-right-radius: 11px;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
     
   }
 `

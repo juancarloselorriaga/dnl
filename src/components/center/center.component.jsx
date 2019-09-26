@@ -5,7 +5,13 @@ const Center = ({ children, className, background, arched }) => {
   return (
     <div className={className}>
       <div
-        className={arched ? "arched" : !background ? "center-backgroundless" : "center-background"}
+        className={
+          arched
+            ? "arched"
+            : !background
+            ? "center-backgroundless"
+            : "center-background"
+        }
       >
         {children}
       </div>
@@ -14,6 +20,7 @@ const Center = ({ children, className, background, arched }) => {
 }
 
 export default styled(Center)`
+  
   .center-background {
     width: 89vw;
     margin: 0 auto;
@@ -24,7 +31,9 @@ export default styled(Center)`
     box-shadow: var(--smoothSmallShadow);
     border-radius: 11px;
     background: var(--mainWhite);
+    text-align: ${props => props.center && 'center'};
   }
+  
   .center-backgroundless {
     padding: 1.3rem;
     margin: 0 auto;
@@ -32,7 +41,10 @@ export default styled(Center)`
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-column-gap: 2rem;
     border-radius: 11px;
-    background: var(--offWhite);
+    background: ${props =>
+      props.white ? "var(--mainWhite)" : "var(--offWhite)"};
+
+      text-align: ${props => props.center && 'center'};
   }
   .arched {
     margin-top: auto;

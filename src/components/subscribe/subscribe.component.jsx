@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import Checkbox from "react-simple-checkbox"
 
 import InputButton from "../input-button/input-button.component"
+import Decision from "../decision/decision.component"
 
 const Subscribe = ({ className }) => {
   const [isChecked, setIsChecked] = useState(false)
@@ -14,6 +14,10 @@ const Subscribe = ({ className }) => {
 
   const handleInputChange = e => {
     setEmailField(e.target.value)
+  }
+
+  const handleCheckboxUpdate = () => {
+    setIsChecked(isChecked => !isChecked)
   }
 
   return (
@@ -31,19 +35,7 @@ const Subscribe = ({ className }) => {
             handleSend={handleSend}
             onChange={handleInputChange}
           ></InputButton>
-          <div className="check-box-wrapper">
-            <div className="check-box">
-              <Checkbox
-                color="#16b186"
-                size="2"
-                checked={isChecked}
-                onChange={() => setIsChecked(isChecked => !isChecked)}
-              />
-            </div>
-            <div className="label-wrapper">
-              <label>Me quiero suscribir al newsletter mensual de DNL.</label>
-            </div>
-          </div>
+          <Decision isChecked={isChecked} handleCheckboxUpdate={handleCheckboxUpdate} label="Me quiero suscribir al newsletter mensual de DNL."/>
         </form>
       </div>
     </div>
@@ -59,23 +51,6 @@ export default styled(Subscribe)`
     text-transform: capitalize;
     color: var(--mainWhite);
     font-size: 1.8rem;
-  }
-
-  .check-box-wrapper {
-    color: var(--mainWhite);
-    margin-top: 1rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .label-wrapper {
-    margin-left: 1rem;
-  }
-
-  .check-box-wrapper label {
-    font-size: 0.7rem;
-    font-weight: 300;
   }
 
   .subscribe span {
