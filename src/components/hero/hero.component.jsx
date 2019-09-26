@@ -32,6 +32,7 @@ export default styled(Hero)`
     min-height: calc(100vh - 80px);
     padding: ${props => props.extraBottom ? "0rem 1.3rem 8rem 1.3rem" : "0rem 1.3rem 4rem 1.3rem"};
     display: flex;
+    flex-direction: column;
     justify-content: ${props => (props.centered ? "center" : "flex-start")};
     align-items: ${props => (props.centered ? "center" : "flex-start")};
   }

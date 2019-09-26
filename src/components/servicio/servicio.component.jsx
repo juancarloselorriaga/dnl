@@ -29,8 +29,7 @@ export default styled(Servicio)`
   }
 
   .link {
-    width: 100%;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.8rem;

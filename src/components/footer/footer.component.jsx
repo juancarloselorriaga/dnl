@@ -18,13 +18,7 @@ const Footer = () => {
         <div className={styles.links}>
           {links.map((item, index) => {
             return (
-              <AniLink
-                key={index}
-                paintDrip
-                hex="#16b186"
-                to={item.path}
-                duration={1}
-              >
+              <AniLink key={index} fade to={item.path}>
                 {item.text}
               </AniLink>
             )

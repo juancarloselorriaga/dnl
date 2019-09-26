@@ -62,7 +62,7 @@ const Navbar = () => {
               return (
                 <li key={index}>
                   {" "}
-                  <AniLink paintDrip hex="#16b186" to={item.path} duration={1}>
+                  <AniLink key={index} fade to={item.path}>
                     {item.text}
                   </AniLink>
                 </li>

@@ -1,18 +1,30 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Boton from "../../boton/boton.component"
 import Center from "../../center/center.component"
 import Seccion from "../../seccion/seccion.component"
 import ArchedImage from "../../arched-image/arched-image.component"
-
 import styles from "./about.module.css"
 
-const About = () => {
+const getAboutImage = graphql`
+  query {
+    about: file(relativePath: { eq: "marketingTarget.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`
 
+const About = () => {
+  const { about } = useStaticQuery(getAboutImage)
   return (
     <Seccion white arched>
       <Center white arched>
-      <ArchedImage aboutImage/>
+      <ArchedImage img={about.childImageSharp.fluid}/>
         <article className={styles.aboutInfo}>
           <h4>el marketing digital está aquí</h4>
           <p className="left">

@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import InputButton from "../input-button/input-button.component"
 import Decision from "../decision/decision.component"
+import Boton from '../boton/boton.component'
 
 const Subscribe = ({ className }) => {
   const [isChecked, setIsChecked] = useState(false)
@@ -24,6 +25,7 @@ const Subscribe = ({ className }) => {
     <div className={className}>
       <div className="title-wrapper">
         <h2>conectate hoy mismo con el mundo digital con DNL</h2>
+        <Boton className='boton' title="¡Contáctanos!" />
       </div>
       <div className="subscribe">
         <h2>mantente al tanto</h2>

@@ -4,7 +4,7 @@ import styled from "styled-components"
 const SectionDescription = ({ textFirst, textSecond, className }) => {
   return (
     <div className={className}>
-        <p className="text">{textFirst} <br /> {textSecond} </p>
+        <p className="text">{textFirst} <br />  {textSecond}</p>
     </div>
   )
 }
