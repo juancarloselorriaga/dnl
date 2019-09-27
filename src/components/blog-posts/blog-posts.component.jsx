@@ -38,7 +38,7 @@ const BlogPosts = ({ className }) => {
       <Title title="Noticias, anuncios y blog." />
       <Center>
         {blogPosts.map(({ node }) => {
-          return <Card key={node.id} items={node} textoBoton="Ver post" />
+          return <Card key={node.id} content={node.content.content} items={node} textoBoton="Ver post" />
         })}
       </Center>
       <div className="button-wrapper">

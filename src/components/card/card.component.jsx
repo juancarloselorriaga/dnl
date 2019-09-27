@@ -5,8 +5,8 @@ import BackgroundImage from "gatsby-background-image"
 
 import { FaLongArrowAltRight } from "react-icons/fa"
 
-const Card = ({ className, items, textoBoton }) => {
-  const { title, content, img } = items
+const Card = ({ className, items, textoBoton, content }) => {
+  const { title, img } = items
   return (
     <article className={className}>
         <BackgroundImage
@@ -15,7 +15,7 @@ const Card = ({ className, items, textoBoton }) => {
         />
       <div className="card-content">
         <h5>{title}</h5>
-        <p>{content.content}</p>
+        <p>{content}</p>
       </div>
       <div className="card-action">
         <a href="/">
