@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-const Boton = ({ className, title, to, submit }) => {
+const Boton = ({ className, title, to, submit, contrast }) => {
   return (
     <div>
       {submit ? (
@@ -29,7 +29,7 @@ export default styled(Boton)`
   display: inline-block;
   transition: all 0.3s linear;
   cursor: pointer;
-  border: 2px solid #16b186;
+  border: ${props => props.contrast ? '2px solid white' : '2px solid #16b186'};
   border-radius: 100px;
   &:hover {
     background: transparent;
