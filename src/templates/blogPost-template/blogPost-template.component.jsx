@@ -57,7 +57,7 @@ const BlogPostTemplate = ({ data, className }) => {
             <article className="post">
               {documentToReactComponents(json, options)}
             </article>
-              <Boton title="todos los posts" to="/blog" />
+            <Boton title="todos los posts" to="/blog" />
           </Center>
         </Seccion>
         <BlogPosts />

@@ -53,9 +53,9 @@ const Footer = () => {
           {new Date().getFullYear()} todos los derechos reservados.
         </div>
         <div className={styles.avisoDePrivacidad}>
-          <a href="/">
+          <AniLink to="/aviso-de-privacidad">
             <span>Aviso de privacidad</span>
-          </a>
+          </AniLink>
         </div>
       </Center>
     </Seccion>
