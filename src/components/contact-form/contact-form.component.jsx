@@ -18,7 +18,7 @@ const ContactForm = ({ className }) => {
         method="POST"
         className="form"
       >
-        <div>
+        <div className='form-wrapper'>
           <label htmlFor="name">nombre</label>
           <input
             type="text"
@@ -62,7 +62,7 @@ export default styled(ContactForm)`
   .form {
     width: 100%;
   }
-  label {
+  .form-wrapper label {
     text-transform: capitalize;
     display: block;
     margin-bottom: 0.5rem;
