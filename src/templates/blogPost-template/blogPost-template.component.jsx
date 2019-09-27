@@ -54,11 +54,10 @@ const BlogPostTemplate = ({ data, className }) => {
             <div className="publicado-el">
               <span>Publicado el {publicado}</span>
             </div>
-
             <article className="post">
               {documentToReactComponents(json, options)}
             </article>
-              <Boton title="todos los posts" to="/" />
+              <Boton title="todos los posts" to="/blog" />
           </Center>
         </Seccion>
         <BlogPosts />

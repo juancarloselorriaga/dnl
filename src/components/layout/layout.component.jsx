@@ -1,4 +1,5 @@
 import React from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Navbar from "../navbar/navbar.component"
 import Footer from "../footer/footer.component"
@@ -14,9 +15,11 @@ const Layout = ({ children }) => {
       <Navbar />
       {children}
       <Footer />
-      <RoundButton floating big>
-        <FaComments size='1.5rem'/>
-      </RoundButton>
+      <AniLink fade to='/contacto'>
+        <RoundButton floating big>
+          <FaComments size="1.5rem" />
+        </RoundButton>
+      </AniLink>
     </main>
   )
 }

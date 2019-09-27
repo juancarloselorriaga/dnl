@@ -41,11 +41,14 @@ const Navbar = () => {
                 }
           }
         >
-          {isOnTop && !isOpen ? (
-            <img src={Logo} alt="dnl logo" />
-          ) : (
-            <img src={LogoColors} alt="dnl logo" />
-          )}
+          <AniLink fade to="/">
+            {isOnTop && !isOpen ? (
+              <img src={Logo} alt="dnl logo" />
+            ) : (
+              <img src={LogoColors} alt="dnl logo" />
+            )}
+          </AniLink>
+
           <RoundButton nav onClick={toggleNav}>
             <FaBars />
           </RoundButton>
@@ -61,7 +64,6 @@ const Navbar = () => {
             {links.map((item, index) => {
               return (
                 <li key={index}>
-                  {" "}
                   <AniLink key={index} fade to={item.path}>
                     {item.text}
                   </AniLink>
