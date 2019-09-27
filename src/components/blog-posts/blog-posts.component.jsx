@@ -9,25 +9,29 @@ import Seccion from "../seccion/seccion.component"
 import Center from "../center/center.component"
 
 const getBlogPosts = graphql`
-  query {
-  blogPosts: allContentfulPosts{
-    edges {
-      node {
-        id: contentful_id
-        title
-        slug
-        content {
-          content
-        }
-        img: imagen {
-          fluid {
-            ...GatsbyContentfulFluid_tracedSVG
+    query {
+      blogPosts: allContentfulPosts(
+        filter: { mostrarEnPrincipal: { eq: true } }
+      ) {
+        edges {
+          node {
+            id: contentful_id
+            title
+            slug
+            publicado
+            autor
+            resumen {
+              resumen
+            }
+            img: imagen {
+              fluid {
+                ...GatsbyContentfulFluid_tracedSVG
+              }
+            }
           }
         }
       }
     }
-  }
-}
 `
 
 const BlogPosts = ({ className }) => {
@@ -38,9 +42,17 @@ const BlogPosts = ({ className }) => {
       <Title title="Noticias, anuncios y blog." />
       <Center>
         {blogPosts.map(({ node }) => {
-          return <Card key={node.id} content={node.content.content} items={node} textoBoton="Ver post" />
+          return (
+            <Card
+              key={node.id}
+              content={node.resumen.resumen}
+              items={node}
+              textoBoton="Ver post"
+            />
+          )
         })}
       </Center>
+      
       <div className="button-wrapper">
         <Boton title="ver todos los posts" />
       </div>
