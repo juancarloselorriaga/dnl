@@ -38,7 +38,7 @@ const About = () => {
             heard of them salvia, jianbing pitchfork brooklyn kinfolk cray raw
             denim echo park kogi kale chips ethical.
           </p>
-          <Boton title="leer más" />
+          <Boton to="/contacto" title="¿Tienes dudas?" />
         </article>
       </Center>
     </Seccion>

@@ -51,7 +51,7 @@ const ContactForm = ({ className }) => {
           label="Me quiero suscribir al newsletter mensual de DNL."
         />
         <div className="button-wrapper">
-          <Boton title="Enviar" className="submit" />
+          <Boton submit title="¡Contáctanos!" />
         </div>
       </form>
     </div>

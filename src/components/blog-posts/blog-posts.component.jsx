@@ -54,7 +54,7 @@ const BlogPosts = ({ className }) => {
       </Center>
       
       <div className="button-wrapper">
-        <Boton title="ver todos los posts" />
+      <Boton to="/blog" title="Ver todos los posts" />
       </div>
     </Seccion>
   )

@@ -14,7 +14,7 @@ const Direccion = ({ className }) => {
           <h4>Dirección</h4>
           <span>Perif. Blvd. Manuel Ávila Camacho 36, Lomas - Virreyes</span>
           <div className="link">
-            <a href="/">
+            <a target='blank' href="https://www.google.com/maps/place/Torre+Esmeralda+II/@19.4291218,-99.2053275,15z/data=!4m2!3m1!1s0x0:0x149bda154a37d02a?sa=X&ved=2ahUKEwjXyYaBivDkAhUORa0KHY_SC80Q_BIwC3oECAwQCw">
               <FaMapMarkerAlt />
               <span>Nuestra oficina en Google Maps</span>
             </a>

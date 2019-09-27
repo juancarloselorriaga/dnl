@@ -10,7 +10,7 @@ const HeroContent = ({ className }) => {
     <div className={className}>
       <HeroTitle title="El apoyo en marketing que necesitas hoy." subtitle="El método de DNL es único y te posicionamos increíblemente rápido." />
       <div className='button-wrapper'>
-        <Boton title="¡Conócenos!" />
+        <Boton to="/contacto" title="¡Contáctanos!" />
       </div>
       <div className='particles-wrapper'>
         <Particles params={{

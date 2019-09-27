@@ -6,7 +6,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../../components/layout/layout.component"
 import Hero from "../../components/hero/hero.component"
 import HeroTitle from "../../components/hero-title/hero-title.component"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Boton from "../../components/boton/boton.component"
 import Subscribe from "../../components/subscribe/subscribe.component"
 import Seccion from "../../components/seccion/seccion.component"
@@ -59,9 +58,7 @@ const BlogPostTemplate = ({ data, className }) => {
             <article className="post">
               {documentToReactComponents(json, options)}
             </article>
-            <AniLink fade to="/blog">
-              <Boton title="todos los posts" />
-            </AniLink>
+              <Boton title="todos los posts" to="/" />
           </Center>
         </Seccion>
         <BlogPosts />
