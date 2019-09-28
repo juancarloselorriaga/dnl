@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import breakpoint from 'styled-components-breakpoint';
 
 import InputButton from "../input-button/input-button.component"
 import Decision from "../decision/decision.component"
@@ -64,4 +65,10 @@ export default styled(Subscribe)`
   .title-wrapper {
     margin-bottom: 4rem;
   }
+
+  ${breakpoint('tablet')`
+    .subscribe {
+      width: 50%;
+    }
+  `}
 `

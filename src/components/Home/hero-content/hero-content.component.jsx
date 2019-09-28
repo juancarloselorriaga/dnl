@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import breakpoint from 'styled-components-breakpoint';
 import Particles from "react-particles-js"
 
 import Boton from "../../boton/boton.component"
@@ -26,4 +27,12 @@ export default styled(HeroContent)`
   .particles-wrapper, .button-wrapper {
     margin-top: 1.5rem;
   }
+
+  ${breakpoint('tablet')`
+  .particles-wrapper, .button-wrapper {
+    margin-top: 2.5rem;
+  }
+  `}
+
+  
 `

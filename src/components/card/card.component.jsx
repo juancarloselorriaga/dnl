@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import breakpoint from "styled-components-breakpoint"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import BackgroundImage from "gatsby-background-image"
 
@@ -21,7 +22,7 @@ const Card = ({ className, items, textoBoton, content }) => {
       </div>
       <div className="card-action">
         <AniLink fade className="link" to={`/posts/${slug}`}>
-        <span>{textoBoton}</span>
+          <span>{textoBoton}</span>
           <FaLongArrowAltRight />
         </AniLink>
       </div>
@@ -33,6 +34,7 @@ export default styled(Card)`
   margin: 2rem 0;
   border-radius: 11px;
   box-shadow: var(--smoothSmallShadow);
+  width: 100%;
   .card-media,
   &:before {
     height: 150px;
@@ -94,6 +96,11 @@ export default styled(Card)`
   .fecha {
     font-size: 0.8rem;
   }
+
+  ${breakpoint("tablet")`
+  width: 40%;
+    margin: 1.3rem;
+  `}
 `
 
 // <div className="card-media" background={img} />

@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 
-const SectionDescription = ({ textFirst, textSecond, className }) => {
+const SectionDescription = ({ text, className }) => {
   return (
     <div className={className}>
-        <p className="text">{textFirst} <br />  {textSecond}</p>
+        <p className="text">{text}</p>
     </div>
   )
 }
@@ -12,12 +12,14 @@ const SectionDescription = ({ textFirst, textSecond, className }) => {
 export default styled(SectionDescription)`
   font-size: 1rem;
   font-weight: 300;
-  margin-bottom: 2 rem;
+  margin: 2 rem;
   padding: 0 1.3rem;
   p {
     text-align: center;
     letter-spacing: 0.5px; 
     line-height: 200%;
+    margin: 2rem 0;
+
   }
   .text {
     color: var(--mainBlack);

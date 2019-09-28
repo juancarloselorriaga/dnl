@@ -22,12 +22,15 @@ const Center = ({ children, className, background, arched }) => {
 export default styled(Center)`
   
   .center-background {
+        /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 2rem; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 89vw;
     margin: 0 auto;
     padding: 1.3rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-column-gap: 2rem;
     box-shadow: var(--smoothSmallShadow);
     border-radius: 11px;
     background: var(--mainWhite);
@@ -37,9 +40,12 @@ export default styled(Center)`
   .center-backgroundless {
     padding: 1.3rem;
     margin: 0 auto;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-column-gap: 2rem;
+    grid-column-gap: 2rem; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     border-radius: 11px;
     background: ${props =>
       props.white ? "var(--mainWhite)" : "var(--offWhite)"};
@@ -56,5 +62,6 @@ export default styled(Center)`
   }
   .arched .left {
     text-align: left;
+    width: 100%;
   }
 `

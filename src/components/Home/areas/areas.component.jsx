@@ -17,9 +17,6 @@ const getAreas = graphql`
           id: contentful_id
           title
           slug
-          resumen {
-            resumen
-          }
           img: logo {
             fixed(width: 100, height: 100) {
           ...GatsbyContentfulFixed_tracedSVG
@@ -39,8 +36,7 @@ const Areas = () => {
     <Seccion offWhite>
       <Title title="Una solución completa a tus necesidades" />
       <SectionDescription
-        textFirst="Next level food truck messenger chartreuse. Snackwave gentrify vinyl cold-pressed vaporware cornelia."
-        textSecond="Franzen meditation echo park jianbing, banjo chambray narwhal XOXO bushwick flexitarian."
+        text="Next level food truck messenger chartreuse. Snackwave gentrify vinyl cold-pressed vaporware cornelia. Franzen meditation echo park jianbing, banjo chambray narwhal XOXO bushwick flexitarian."
       />
       <Center background>
         {areas.map(({ node }) => {
@@ -48,7 +44,6 @@ const Areas = () => {
             <Servicio
               key={node.id}
               title={node.title}
-              text={node.resumen.resumen}
               slug={node.slug}
             >
             <Img fixed={node.img.fixed} />

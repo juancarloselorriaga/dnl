@@ -9,7 +9,7 @@ import styles from "./about.module.css"
 
 const getAboutImage = graphql`
   query {
-    about: file(relativePath: { eq: "marketingTarget.png" }) {
+    about: file(relativePath: { eq: "bulb.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -38,7 +38,6 @@ const About = () => {
             heard of them salvia, jianbing pitchfork brooklyn kinfolk cray raw
             denim echo park kogi kale chips ethical.
           </p>
-          <Boton to="/contacto" title="¿Tienes dudas?" />
         </article>
       </Center>
     </Seccion>

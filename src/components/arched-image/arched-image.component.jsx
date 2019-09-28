@@ -8,6 +8,7 @@ const ArchedImage = ({ className, img }) => {
       <div className="img-container">
         <Img
           fluid={img}
+          className='img'
         />
       </div>
     </article>
@@ -17,13 +18,15 @@ const ArchedImage = ({ className, img }) => {
 export default styled(ArchedImage)`
   margin: 1rem 0;
   position: relative;
-  img {
-    width: 100%;
+  .img {
+    width: 60%;
     display: block;
     border-radius: 100%;
   }
 
   .img-container {
     padding: 2rem;
+    display: flex;
+    justify-content: center;
   }
 `

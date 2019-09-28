@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import breakpoint from 'styled-components-breakpoint';
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import { FaLongArrowAltRight } from "react-icons/fa"
@@ -8,7 +9,6 @@ const Servicio = ({ children, text, title, slug, className }) => {
   return (
     <article className={className}>
       <div className="icon-wrapper">{children}</div>
-      <p>{text}</p>
       <AniLink fade className="link" to={`/areas/${slug}`}>
         <span>{title}</span>
         <FaLongArrowAltRight />
@@ -18,6 +18,7 @@ const Servicio = ({ children, text, title, slug, className }) => {
 }
 
 export default styled(Servicio)`
+  width: 100%;
   margin: 2rem 0 1rem 0;
   padding-bottom: 1rem;
   text-align: center;
@@ -42,4 +43,9 @@ export default styled(Servicio)`
     justify-content: center;
     margin-bottom: 2rem;
   }
+
+  ${breakpoint('tablet')`
+    width: 40%;
+    margin: 1.3rem;
+  `}
 `
