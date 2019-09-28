@@ -132,6 +132,7 @@ export default styled(Footer)`
     letter-spacing: var(--mainSpacing);
     color: var(--mainBlackText);
     line-height: 2;
+    width: 100%;
   }
 
   .brand p {

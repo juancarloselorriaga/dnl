@@ -10,7 +10,7 @@ const Direccion = ({ className }) => {
   return (
     <div className={className}>
       <Seccion offWhite>
-        <Center className='direccion' offWhite center>
+        <Center className='direccion' offWhite center column>
           <h4>Dirección</h4>
           <span>Perif. Blvd. Manuel Ávila Camacho 36, Lomas - Virreyes</span>
           <div className="link">

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import breakpoint from 'styled-components-breakpoint';
 
 import Boton from "../boton/boton.component"
 import Decision from "../decision/decision.component"
@@ -59,6 +60,8 @@ const ContactForm = ({ className }) => {
 }
 
 export default styled(ContactForm)`
+display: flex;
+justify-content: center;
   .form {
     width: 100%;
   }
@@ -94,4 +97,10 @@ export default styled(ContactForm)`
   .button-wrapper {
     text-align: center;
   }
+
+  ${breakpoint('tablet')`
+  .form {
+    width: 75%;
+  }
+  `}
 `

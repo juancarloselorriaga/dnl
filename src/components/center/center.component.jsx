@@ -45,6 +45,8 @@ export default styled(Center)`
     grid-column-gap: 2rem; */
     display: flex;
     flex-wrap: wrap;
+    flex-direction: ${props => props.column ? 'column' : 'row'};
+    align-items: center;
     justify-content: center;
     border-radius: 11px;
     background: ${props =>

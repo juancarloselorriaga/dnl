@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-// import Checkbox from "react-simple-checkbox"
+import breakpoint from 'styled-components-breakpoint';
 
 const Decision = ({ handleCheckboxUpdate, isChecked, label, className }) => {
   return (
@@ -111,6 +111,12 @@ export default styled(Decision)`
     transition: all 0.2s linear;
     transition-delay: 0.15s;
   }
+
+  ${breakpoint('tablet')`
+    display: flex;
+    justify-content: center;
+  `}
+  
 `
 
 // <Checkbox
