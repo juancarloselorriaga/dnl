@@ -26,6 +26,7 @@ export default styled(Hero)`
   justify-content: ${props => (props.home ? "flex-start" : "center")};
   align-items: ${props => (props.home ? "flex-start" : "center")};
   .children {
+    width: 100vw;
     margin-top: 80px;
     min-height: calc(100vh - 80px);
     padding: ${props =>

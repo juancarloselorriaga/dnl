@@ -100,7 +100,9 @@ export default styled(Card)`
   ${breakpoint("tablet")`
     width: 40%;
     margin: 1.3rem;
-    min-height: 600px;
+    .card-content {
+      min-height: 280px;
+  }
   `}
 `
 
