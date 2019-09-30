@@ -26,21 +26,21 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={styles.navbar}>
+    <nav
+      className={`${styles.navbar} ${styles.sticky}`}
+      style={
+        isOnTop && !isOpen
+          ? { background: "transparent" }
+          : isOpen
+          ? { background: "white" }
+          : {
+              background: "white",
+              borderBottom: "1px rgb(35,55,72, 0.20) solid",
+            }
+      }
+    >
       <div className={styles.navCenter}>
-        <div
-          className={`${styles.navHeader} ${styles.sticky}`}
-          style={
-            isOnTop && !isOpen
-              ? { background: "transparent" }
-              : isOpen
-              ? { background: "white" }
-              : {
-                  background: "white",
-                  borderBottom: "1px rgb(35,55,72, 0.20) solid",
-                }
-          }
-        >
+        <div className={`${styles.navHeader}`}>
           <AniLink fade to="/">
             {isOnTop && !isOpen ? (
               <img src={Logo} alt="dnl logo" />
