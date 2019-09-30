@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Boton from "../../boton/boton.component"
 import Center from "../../center/center.component"
 import Seccion from "../../seccion/seccion.component"
 import ArchedImage from "../../arched-image/arched-image.component"

@@ -33,19 +33,19 @@
 .nav-links {
   list-style-type: none;
   transition: visibility 0s, opacity 0.3s linear;
-  height: 0;
-  width: 100%;
   overflow: hidden;
   height: auto;
   visibility: hidden;
   position: fixed;
   top: 0;
+  left: 0;
   color: var(--mainBlack);
   padding-bottom: 1rem;
   opacity: 0;
 }
 .show-nav {
   visibility: visible;
+  width: 100%;
   opacity: 1;
   margin-top: 80px;
   background: var(--mainWhite);

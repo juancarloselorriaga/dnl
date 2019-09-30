@@ -28,7 +28,7 @@ const AreaTemplate = ({ data, className }) => {
       <ArchedImage img={logo.fluid}/>
         <article className=''>
           <Title title={subtitulo} />
-          <SectionDescription textFirst={contenidoSubtitulo.contenidoSubtitulo} />
+          <SectionDescription text={contenidoSubtitulo.contenidoSubtitulo} />
         </article>
       </Center>
       </Seccion>

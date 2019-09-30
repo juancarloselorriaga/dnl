@@ -118,10 +118,3 @@ export default styled(Decision)`
   `}
   
 `
-
-// <Checkbox
-// color="#16b186"
-// size="2"
-// checked={isChecked}
-// onChange={handleCheckboxUpdate}
-// />
