@@ -103,4 +103,10 @@ justify-content: center;
     width: 75%;
   }
   `}
+
+  ${breakpoint('desktop')`
+  .form {
+    width: 60%;
+  }
+  `}
 `

@@ -36,7 +36,7 @@ const AvisoDePrivacidad = ({ className }) => {
           <HeroTitle smaller centered title="Aviso de privacidad" />
         </Hero>
         <Seccion arched centered white>
-          <Center arched centered>
+          <Center arched centered white>
             {aviso.map(({ node }) => {
               const jsonContent = node.avisoDePrivacidad.json
               return (
