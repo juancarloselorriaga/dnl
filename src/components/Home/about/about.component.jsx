@@ -23,21 +23,25 @@ const About = () => {
   return (
     <Seccion white arched>
       <Center white arched>
-      <ArchedImage img={about.childImageSharp.fluid}/>
-        <article className={styles.aboutInfo}>
-          <h4>el marketing digital está aquí</h4>
-          <p className="left">
-            Hexagon salvia austin godard succulents tattooed celiac bushwick
-            raclette poutine snackwave enamel pin. Leggings prism artisan, fixie
-            marfa lomo butcher paleo authentic
-          </p>
-          <p className="left">
-            Ethical synth next level post-ironic cliche. Pok pok poke fashion
-            axe, palo santo narwhal cronut food truck. DIY you probably haven't
-            heard of them salvia, jianbing pitchfork brooklyn kinfolk cray raw
-            denim echo park kogi kale chips ethical.
-          </p>
-        </article>
+        <div className={styles.aboutWrapper}>
+          <div className={styles.imageWrapper}>
+            <ArchedImage img={about.childImageSharp.fluid} />
+          </div>
+          <article className={styles.aboutInfo}>
+            <h4>el marketing digital está aquí</h4>
+            <p className="left">
+              Hexagon salvia austin godard succulents tattooed celiac bushwick
+              raclette poutine snackwave enamel pin. Leggings prism artisan,
+              fixie marfa lomo butcher paleo authentic
+            </p>
+            <p className="left">
+              Ethical synth next level post-ironic cliche. Pok pok poke fashion
+              axe, palo santo narwhal cronut food truck. DIY you probably
+              haven't heard of them salvia, jianbing pitchfork brooklyn kinfolk
+              cray raw denim echo park kogi kale chips ethical.
+            </p>
+          </article>
+        </div>
       </Center>
     </Seccion>
   )

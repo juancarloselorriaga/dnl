@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import breakpoint from "styled-components-breakpoint"
 
 const Center = ({ children, className, background, arched }) => {
   return (
@@ -20,44 +21,36 @@ const Center = ({ children, className, background, arched }) => {
 }
 
 export default styled(Center)`
-  
+  padding: 1.3rem;
+  background: ${props =>
+      props.white ? "var(--mainWhite)" : "var(--offWhite)"};
+
   .center-background {
-        /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-column-gap: 2rem; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 89vw;
     margin: auto;
-    padding: 1.3rem;
     box-shadow: var(--smoothSmallShadow);
     border-radius: 11px;
     background: var(--mainWhite);
-    text-align: ${props => props.center && 'center'};
+    text-align: ${props => props.center && "center"};
   }
-  
+
   .center-backgroundless {
-    padding: 1.3rem;
     margin: 0 auto;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-column-gap: 2rem; */
     display: flex;
     flex-wrap: wrap;
-    flex-direction: ${props => props.column ? 'column' : 'row'};
+    flex-direction: ${props => (props.column ? "column" : "row")};
     align-items: center;
     justify-content: center;
     border-radius: 11px;
-    background: ${props =>
-      props.white ? "var(--mainWhite)" : "var(--offWhite)"};
+    
 
-      text-align: ${props => props.center && 'center'};
+    text-align: ${props => props.center && "center"};
   }
   .arched {
     margin-top: auto;
     background: var(--offWhite);
-    padding: 1.3rem;
     background: ${props =>
       props.white ? "var(--mainWhite)" : "var(--offWhite)"};
   }
@@ -65,4 +58,8 @@ export default styled(Center)`
     text-align: left;
     width: 100%;
   }
+
+  ${breakpoint("desktop")`
+    padding: 1.3rem 4.5rem;
+  `}
 `

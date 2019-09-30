@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import breakpoint from 'styled-components-breakpoint';
 import BackgroundImage from "gatsby-background-image"
 
 const Hero = ({ children, className, img }) => {
@@ -42,4 +43,9 @@ export default styled(Hero)`
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     opacity: 1 !important;
   }
+
+  ${breakpoint('desktop')`
+    min-height: 50vh;
+    max-height: 80vh;
+  `}
 `

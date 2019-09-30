@@ -48,4 +48,9 @@ export default styled(Servicio)`
     width: 40%;
     margin: 1.3rem;
   `}
+
+  ${breakpoint('desktop')`
+    width: 25%;
+    margin: 1.3rem;
+  `}
 `

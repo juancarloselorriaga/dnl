@@ -37,11 +37,10 @@ export default styled(Seccion)`
     border-bottom: 0.5px var(--mainGrey) solid;
   }
   .arched {
-    margin-top: auto;
     background: var(--offWhite);
     text-align: center;
     background-color: var(--mainWhite);
-    padding-bottom: ${props => (props.footer ? "0" : "4rem")};
+    padding-bottom: ${props => (props.footer && "0")};
   }
   #curveUpColor path {
     fill: ${props =>
