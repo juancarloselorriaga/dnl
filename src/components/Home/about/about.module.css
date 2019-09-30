@@ -54,11 +54,7 @@
     display: flex;
   }
 
-  .image-wrapper {
-    width: 45%;
-  }
-
-  .about-info {
+  .image-wrapper, .about-info {
     width: 45%;
   }
 }

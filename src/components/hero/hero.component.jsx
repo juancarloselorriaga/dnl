@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import breakpoint from 'styled-components-breakpoint';
+import breakpoint from "styled-components-breakpoint"
 import BackgroundImage from "gatsby-background-image"
 
 const Hero = ({ children, className, img }) => {
@@ -44,8 +44,13 @@ export default styled(Hero)`
     opacity: 1 !important;
   }
 
-  ${breakpoint('desktop')`
-    min-height: 50vh;
+  ${breakpoint("desktop")`
+    min-height: 60vh;
     max-height: 80vh;
+
+    .children {
+      min-height: 60vh;
+      max-height: 80vh;
+  }
   `}
 `

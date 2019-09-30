@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const SectionDescription = ({ text, className }) => {
+const SectionDescription = ({ text, className, noExtraPadding }) => {
   return (
     <div className={className}>
         <p className="text">{text}</p>
@@ -32,5 +32,9 @@ export default styled(SectionDescription)`
       display: inline-block;
       margin: 0 0.35rem;
     }
+  }
+
+  @media (min-width: 992px) {
+    padding: ${props => props.noExtraPadding ? '0' : '0 4.5rem'}
   }
 `
