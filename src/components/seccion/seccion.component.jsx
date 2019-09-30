@@ -60,6 +60,7 @@ export default styled(Seccion)`
   .svg {
     display: block;
     margin-top: -100px;
+    margin-bottom: -2px;
     position: relative;
     z-index: 30;
   }

@@ -29,7 +29,7 @@ export default styled(Center)`
     flex-wrap: wrap;
     justify-content: center;
     width: 89vw;
-    margin: 0 auto;
+    margin: auto;
     padding: 1.3rem;
     box-shadow: var(--smoothSmallShadow);
     border-radius: 11px;
@@ -58,9 +58,8 @@ export default styled(Center)`
     margin-top: auto;
     background: var(--offWhite);
     padding: 1.3rem;
-    background-color: var(--mainWhite);
-    border-top-left-radius: 200px;
-    border-top-right-radius: 200px;
+    background: ${props =>
+      props.white ? "var(--mainWhite)" : "var(--offWhite)"};
   }
   .arched .left {
     text-align: left;
