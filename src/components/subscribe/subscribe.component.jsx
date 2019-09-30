@@ -71,4 +71,8 @@ export default styled(Subscribe)`
       width: 50%;
     }
   `}
+
+  ${breakpoint('tablet')`
+  padding: ${props => !props.noBottom ? "8rem 4.5rem" : "4rem 4.5rem"};
+  `}
 `
