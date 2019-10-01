@@ -4,9 +4,9 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: "DNL",
+    title: "DNL | Desarrollo de Negocios Lomas",
     description:
-      "Desarrollo de Negocios Lomas es una gencia mexicana de inbound marketing, te ayudamos a llegar al cliente que tú necesitas.",
+      "Agencia mexicana de inbound marketing, te ayudamos a llegar al cliente que tú necesitas.",
     author: "@juancarloselorriaga",
     twitterUsername: "@juancarlosverri",
     image: "/logo-desarrollo-de-negocios-lomas.png",
