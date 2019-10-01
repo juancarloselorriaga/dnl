@@ -7,7 +7,6 @@ const Seccion = ({ children, className, arched }) => {
       {arched && (
         <Fragment>
           <svg
-            id="curveUpColor"
             xmlns="http://www.w3.org/2000/svg"
             version="1.1"
             width="100%"
@@ -42,7 +41,7 @@ export default styled(Seccion)`
     background-color: var(--mainWhite);
     padding-bottom: ${props => (props.footer && "0")};
   }
-  #curveUpColor path {
+  .svg path {
     fill: ${props =>
       props.white
         ? "var(--mainWhite)"

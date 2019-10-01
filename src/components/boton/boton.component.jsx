@@ -2,17 +2,17 @@ import React from "react"
 import styled from "styled-components"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-const Boton = ({ className, title, to, submit, contrast }) => {
+const Boton = ({ className, title, to, submit }) => {
   return (
     <div>
       {submit ? (
         <input type="submit" value={title} className={className} />
       ) : to ? (
         <AniLink fade to={to}>
-          <button className={className}>{title}</button>
+          <button aria-label={title} className={className}>{title}</button>
         </AniLink>
       ) : (
-        <button className={className}>{title}</button>
+        <button aria-label={title} className={className}>{title}</button>
       )}
     </div>
   )
