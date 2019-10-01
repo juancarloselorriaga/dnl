@@ -9,7 +9,7 @@ module.exports = {
       "Desarrollo de Negocios Lomas es una gencia mexicana de inbound marketing, te ayudamos a llegar al cliente que tú necesitas.",
     author: "@juancarloselorriaga",
     twitterUsername: "@juancarlosverri",
-    image: "logo-desarrollo-de-negocios-lomas.png",
+    image: "/logo-desarrollo-de-negocios-lomas.png",
     siteUrl: "https://dnl.netlify.com",
   },
   plugins: [
