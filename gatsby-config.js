@@ -3,6 +3,15 @@ require('dotenv').config({
 })
 
 module.exports = {
+  siteMetadata: {
+    title: "DNL",
+    description:
+      "Desarrollo de Negocios Lomas es una gencia mexicana de inbound marketing, te ayudamos a llegar al cliente que tú necesitas.",
+    author: "@juancarloselorriaga",
+    twitterUsername: "@juancarlosverri",
+    image: "logo-desarrollo-de-negocios-lomas.png",
+    siteUrl: "https://dnl.netlify.com",
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -22,6 +31,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-playground`
+    `gatsby-plugin-playground`,
+    `gatsby-plugin-react-helmet`
   ],
 }

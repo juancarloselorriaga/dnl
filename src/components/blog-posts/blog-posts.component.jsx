@@ -25,7 +25,7 @@ const getBlogPosts = graphql`
             }
             img: imagen {
               fluid {
-                ...GatsbyContentfulFluid_tracedSVG
+                ...GatsbyContentfulFluid
               }
             }
           }

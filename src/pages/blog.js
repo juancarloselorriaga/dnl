@@ -16,7 +16,7 @@ const getBlogPosts = graphql`
     blogImage: file(relativePath: { eq: "blog.jpg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -33,7 +33,7 @@ const getBlogPosts = graphql`
         }
         img: imagen {
           fluid {
-          ...GatsbyContentfulFluid_tracedSVG
+          ...GatsbyContentfulFluid
         }
         }
       }
