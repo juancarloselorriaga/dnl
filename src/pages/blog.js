@@ -10,6 +10,7 @@ import Seccion from "../components/seccion/seccion.component"
 import Center from "../components/center/center.component"
 import Card from "../components/card/card.component"
 import Title from "../components/title/title.component"
+import SEO from "../components/SEO/SEO.component"
 
 const getBlogPosts = graphql`
   query {
@@ -49,6 +50,7 @@ const AreaTemplate = ({ className }) => {
 
   return (
     <Layout>
+      <SEO title="Blog" />
       <Hero centered extraBottom img={blogImage.childImageSharp} className={className}>
         <HeroTitle
           centered

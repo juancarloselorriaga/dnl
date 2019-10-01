@@ -14,6 +14,7 @@ import ArchedImage from "../../components/arched-image/arched-image.component"
 import Title from "../../components/title/title.component"
 import SectionDescription from "../../components/section-description/section-description.component"
 import Areas from "../../components/Home/areas/areas.component"
+import SEO from "../../components/SEO/SEO.component"
 
 const AreaTemplate = ({ data, className }) => {
   const {
@@ -27,6 +28,7 @@ const AreaTemplate = ({ data, className }) => {
 
   return (
     <Layout>
+    <SEO title={title} />
       <Hero centered extraBottom img={backgroundImage} className={className}>
         <HeroTitle centered smaller title={title} subtitle={resumen.resumen} />
         <Boton className="boton" title="¡Contáctanos!" />

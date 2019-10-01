@@ -9,6 +9,7 @@ import HeroTitle from "../components/hero-title/hero-title.component"
 import Subscribe from "../components/subscribe/subscribe.component"
 import Seccion from "../components/seccion/seccion.component"
 import Center from "../components/center/center.component"
+import SEO from "../components/SEO/SEO.component"
 
 const getAviso = graphql`
   query {
@@ -31,6 +32,7 @@ const AvisoDePrivacidad = ({ className }) => {
 
   return (
     <Layout>
+      <SEO title="Aviso de privacidad" />
       <div className={className}>
         <Hero centered>
           <HeroTitle smaller centered title="Aviso de privacidad" />

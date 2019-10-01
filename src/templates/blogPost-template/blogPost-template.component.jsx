@@ -11,6 +11,7 @@ import Subscribe from "../../components/subscribe/subscribe.component"
 import Seccion from "../../components/seccion/seccion.component"
 import Center from "../../components/center/center.component"
 import BlogPosts from "../../components/blog-posts/blog-posts.component"
+import SEO from "../../components/SEO/SEO.component"
 
 const BlogPostTemplate = ({ data, className }) => {
   const {
@@ -41,6 +42,7 @@ const BlogPostTemplate = ({ data, className }) => {
 
   return (
     <Layout>
+    <SEO title={title} />
       <div className={className}>
         <Hero centered extraBottom img={imagen}>
           <HeroTitle centered smaller title={title} />
