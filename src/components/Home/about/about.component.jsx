@@ -40,6 +40,7 @@ const About = () => {
               haven't heard of them salvia, jianbing pitchfork brooklyn kinfolk
               cray raw denim echo park kogi kale chips ethical.
             </p>
+            
           </article>
         </div>
       </Center>

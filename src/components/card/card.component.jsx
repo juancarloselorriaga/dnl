@@ -104,6 +104,12 @@ export default styled(Card)`
       min-height: 280px;
   }
   `}
+
+  ${breakpoint("desktop")`
+    .card-content {
+      min-height: 100px;
+  }
+  `}
 `
 
 // <div className="card-media" background={img} />

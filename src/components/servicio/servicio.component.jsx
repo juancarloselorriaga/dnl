@@ -52,5 +52,7 @@ export default styled(Servicio)`
   ${breakpoint('desktop')`
     width: 25%;
     margin: 1.3rem;
+    border-bottom: none;
+    padding: 2rem 0;
   `}
 `

@@ -1,7 +1,7 @@
 .about-info p {
   font-size: 1.25rem;
   font-weight: 300;
-  margin: 3rem 0;
+  margin: 3rem 0 1rem 0;
 }
 
 .about-center {
@@ -46,6 +46,12 @@
   }
   .about-info p {
     width: 80%;
+  }
+
+  .about-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 @media screen and (min-width: 992px) {
