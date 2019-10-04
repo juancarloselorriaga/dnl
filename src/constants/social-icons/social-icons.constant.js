@@ -3,8 +3,8 @@ import React from "react"
 import { FaFacebook, FaTwitterSquare, FaInstagram, FaEnvelope } from "react-icons/fa"
 
 export default [
-  { icon: <FaFacebook />, url: "https//facebook.com" },
-  { icon: <FaTwitterSquare />, url: "https//twitter.com" },
-  { icon: <FaInstagram />, url: "https//instagram.com" },
-  { icon: <FaEnvelope />, url: "mailto:contacto@dnlomas.mx" },
+  { icon: <FaFacebook />, url: "https//facebook.com", title: 'facebook' },
+  { icon: <FaTwitterSquare />, url: "https//twitter.com", title: 'twitter' },
+  { icon: <FaInstagram />, url: "https//instagram.com", title: 'instagram' },
+  { icon: <FaEnvelope />, url: "mailto:contacto@dnlomas.mx", title: 'mail' },
 ]

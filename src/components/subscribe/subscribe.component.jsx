@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import breakpoint from 'styled-components-breakpoint';
+import breakpoint from "styled-components-breakpoint"
 
 import InputButton from "../input-button/input-button.component"
 import Decision from "../decision/decision.component"
-import Boton from '../boton/boton.component'
+import Boton from "../boton/boton.component"
 
 const Subscribe = ({ className }) => {
   const [isChecked, setIsChecked] = useState(false)
@@ -26,7 +26,7 @@ const Subscribe = ({ className }) => {
     <div className={className}>
       <div className="title-wrapper">
         <h2>conectate hoy mismo con el mundo digital con DNL</h2>
-        <Boton className='boton' title="¿Tienes dudas?" to="/contacto" />
+        <Boton className="boton" title="¿Tienes dudas?" to="/contacto" />
       </div>
       <div className="subscribe">
         <h2>mantente al tanto</h2>
@@ -38,7 +38,11 @@ const Subscribe = ({ className }) => {
             handleSend={handleSend}
             onChange={handleInputChange}
           ></InputButton>
-          <Decision isChecked={isChecked} handleCheckboxUpdate={handleCheckboxUpdate} label="Me quiero suscribir al newsletter mensual de DNL."/>
+          <Decision
+            isChecked={isChecked}
+            handleCheckboxUpdate={handleCheckboxUpdate}
+            label="Me quiero suscribir al newsletter mensual de DNL."
+          />
         </form>
       </div>
     </div>
@@ -47,7 +51,7 @@ const Subscribe = ({ className }) => {
 
 export default styled(Subscribe)`
   background: var(--mainBlack);
-  padding: ${props => !props.noBottom ? "8rem 1.3rem" : "4rem 1.3rem"};
+  padding: ${props => (!props.noBottom ? "8rem 1.3rem" : "4rem 1.3rem")};
 
   .title-wrapper h2,
   .subscribe h2 {
@@ -66,13 +70,13 @@ export default styled(Subscribe)`
     margin-bottom: 4rem;
   }
 
-  ${breakpoint('tablet')`
+  ${breakpoint("tablet")`
     .subscribe {
       width: 50%;
     }
   `}
 
-  ${breakpoint('tablet')`
-  padding: ${props => !props.noBottom ? "8rem 4.5rem" : "4rem 4.5rem"};
+  ${breakpoint("tablet")`
+  padding: ${props => (!props.noBottom ? "8rem 4.5rem" : "4rem 4.5rem")};
   `}
 `
