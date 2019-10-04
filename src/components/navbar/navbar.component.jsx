@@ -49,7 +49,7 @@ const Navbar = () => {
             )}
           </AniLink>
 
-          <RoundButton nav onClick={toggleNav}>
+          <RoundButton nav onClick={toggleNav} aria-label="menu">
             <FaBars />
           </RoundButton>
         </div>

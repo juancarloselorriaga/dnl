@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
       {children}
       <Footer />
       <AniLink fade to='/contacto'>
-        <RoundButton floating big>
+        <RoundButton floating big aria-label="contacto">
           <FaComments size="1.5rem" />
         </RoundButton>
       </AniLink>
