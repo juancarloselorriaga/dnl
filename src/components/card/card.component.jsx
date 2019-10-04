@@ -111,5 +111,3 @@ export default styled(Card)`
   }
   `}
 `
-
-// <div className="card-media" background={img} />
