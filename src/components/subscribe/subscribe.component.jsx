@@ -25,13 +25,15 @@ const Subscribe = ({ className }) => {
   return (
     <div className={className}>
       <div className="title-wrapper">
-        <h2>conectate hoy mismo con el mundo digital con DNL</h2>
-        <Boton className="boton" title="¿Tienes dudas?" to="/contacto" />
+        <h2>
+          ¿Cómo conectar hoy mismo con el mundo digital para crecer tu negocio?
+        </h2>
+        <Boton className="boton" title="¡Dímelo!" to="/contacto" />
       </div>
       <div className="subscribe">
-        <h2>mantente al tanto</h2>
+        <h2>Suscríbete y entérate de lo último en negocios.</h2>
         <span>
-          Obtén nuestro newsletter mensual con tips para crecer tu negocio.
+          Recibe nuestro newsletter mensual con tips para crecer tu negocio.
         </span>
         <form>
           <InputButton
@@ -41,7 +43,7 @@ const Subscribe = ({ className }) => {
           <Decision
             isChecked={isChecked}
             handleCheckboxUpdate={handleCheckboxUpdate}
-            label="Me quiero suscribir al newsletter mensual de DNL."
+            label="Quiero suscribirme al newsletter mensual de DNL."
           />
         </form>
       </div>

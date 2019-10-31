@@ -9,29 +9,29 @@ import Seccion from "../seccion/seccion.component"
 import Center from "../center/center.component"
 
 const getBlogPosts = graphql`
-    query {
-      blogPosts: allContentfulPosts(
-        filter: { mostrarEnPrincipal: { eq: true } }
-      ) {
-        edges {
-          node {
-            id: contentful_id
-            title
-            slug
-            publicado
-            autor
-            resumen {
-              resumen
-            }
-            img: imagen {
-              fluid {
-                ...GatsbyContentfulFluid
-              }
+  query {
+    blogPosts: allContentfulPosts(
+      filter: { mostrarEnPrincipal: { eq: true } }
+    ) {
+      edges {
+        node {
+          id: contentful_id
+          title
+          slug
+          publicado
+          autor
+          resumen {
+            resumen
+          }
+          img: imagen {
+            fluid {
+              ...GatsbyContentfulFluid
             }
           }
         }
       }
     }
+  }
 `
 
 const BlogPosts = ({ className }) => {
@@ -39,7 +39,7 @@ const BlogPosts = ({ className }) => {
   const blogPosts = response.blogPosts.edges
   return (
     <Seccion offWhite className={className}>
-      <Title title="Noticias, anuncios y blog." />
+      <Title title="Noticias, tendencias y blog." />
       <Center>
         {blogPosts.map(({ node }) => {
           return (
@@ -47,14 +47,14 @@ const BlogPosts = ({ className }) => {
               key={node.id}
               content={node.resumen.resumen}
               items={node}
-              textoBoton="Ver post"
+              textoBoton="Leer artículo"
             />
           )
         })}
       </Center>
-      
+
       <div className="button-wrapper">
-      <Boton to="/blog" title="Ver todos los posts" />
+        <Boton to="/blog" title="Leer más artículos" />
       </div>
     </Seccion>
   )

@@ -55,8 +55,8 @@ const AreaTemplate = ({ className }) => {
         <HeroTitle
           centered
           smaller
-          title="Noticias y anuncios"
-          subtitle="Encuentra todo lo referente a marketing digital en un solo lugar"
+          title="Noticias, tendencias y blog"
+          subtitle="Encuentra información relevante para mejorar tu negocio o servicio."
         />
       </Hero>
       <Seccion white arched>

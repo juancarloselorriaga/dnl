@@ -8,7 +8,6 @@ import Seccion from "../../seccion/seccion.component"
 import Center from "../../center/center.component"
 import Servicio from "../../servicio/servicio.component"
 
-
 const getAreas = graphql`
   query {
     areas: allContentfulAreas {
@@ -19,8 +18,8 @@ const getAreas = graphql`
           slug
           img: logo {
             fixed(width: 100, height: 100) {
-          ...GatsbyContentfulFixed_tracedSVG
-        }
+              ...GatsbyContentfulFixed_tracedSVG
+            }
           }
         }
       }
@@ -31,22 +30,17 @@ const getAreas = graphql`
 const Areas = () => {
   const response = useStaticQuery(getAreas)
   const areas = response.areas.edges
-  
+
   return (
     <Seccion offWhite>
-      <Title title="Una solución completa a tus necesidades" />
-      <SectionDescription
-        text="Next level food truck messenger chartreuse. Snackwave gentrify vinyl cold-pressed vaporware cornelia. Franzen meditation echo park jianbing, banjo chambray narwhal XOXO bushwick flexitarian."
-      />
+      <Title title="Intégrate al mejor equipo para el crecimiento de tu negocio o servicio." />
+      <SectionDescription text="Contamos con tres áreas especializadas para cubrir tus necesidades de manera integral en un solo clic." />
+      <SectionDescription text="'“Es en los problemas donde se esconden las oportunidades” — Albert Einstein'" />
       <Center background>
         {areas.map(({ node }) => {
           return (
-            <Servicio
-              key={node.id}
-              title={node.title}
-              slug={node.slug}
-            >
-            <Img fixed={node.img.fixed} />
+            <Servicio key={node.id} title={node.title} slug={node.slug}>
+              <Img fixed={node.img.fixed} />
             </Servicio>
           )
         })}

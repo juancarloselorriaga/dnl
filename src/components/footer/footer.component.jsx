@@ -27,11 +27,9 @@ const Footer = ({ className }) => {
         <div className="brand">
           <img src={Logo} alt="backroads logo" />
           <p>
-            Meditation hot chicken fanny pack, pickled vinyl sartorial tote bag
-            wolf. Shaman organic scenester messenger bag vice, yuccie pitchfork
-            ethical succulents. XOXO whatever waistcoat squid heirloom 3 wolf
-            moon lomo four loko ennui ramps live-edge. Semiotics truffaut
-            artisan kickstarter hot chicken viral gentrify.
+            Synergy Business, Legal Business y Web Business a tu alcance para
+            desarrollar estrategias integrales con el fin de diferenciar tu
+            producto o servicio en el mercado.
           </p>
         </div>
         <div className="icons">

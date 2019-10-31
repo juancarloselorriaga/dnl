@@ -11,11 +11,11 @@ const HeroContent = ({ className }) => {
     <div className={className}>
       <div className='title-wrapper'>
         <HeroTitle
-          title="El apoyo en marketing que necesitas hoy."
-          subtitle="El método de DNL es único y te posicionamos increíblemente rápido."
+          title="La solución integral que tu empresa necesita."
+          subtitle="Tu cliente ideal está allá fuera. Nosotros lo ayudaremos a encontrarte."
         />
         <div className="button-wrapper">
-          <Boton to="/contacto" title="¡Contáctanos!" />
+          <Boton to="/contacto" title="Me interesa" />
         </div>
       </div>
       <div className="particles-wrapper">

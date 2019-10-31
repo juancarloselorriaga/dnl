@@ -13,7 +13,7 @@ export default () => {
     <Layout>
       <SEO title="Contacto"/>
       <Hero centered>
-        <HeroTitle smaller centered title="Ya trabajamos con varias marcas, nos encantaría ayudarte a ti."/>
+        <HeroTitle smaller centered title="Comienza a tener el negocio que siempre soñaste y atrae a los clientes indicados."/>
       </Hero>
       <Contacto />
       <Direccion />
