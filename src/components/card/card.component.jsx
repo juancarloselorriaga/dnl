@@ -73,7 +73,7 @@ export default styled(Card)`
     font-size: 1.5rem;
     font-weight: 400;
     margin: 2rem;
-    color: #16b186;
+    color: var(--primaryColor);
   }
   .publicacion {
     display: flex;

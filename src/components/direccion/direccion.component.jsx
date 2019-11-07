@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Seccion from "../seccion/seccion.component"
 import Center from "../center/center.component"
 
-import { FaMapMarkerAlt } from "react-icons/fa"
+import { FaMapMarkerAlt, FaPhone } from "react-icons/fa"
 
 const Direccion = ({ className }) => {
   return (
@@ -19,6 +19,12 @@ const Direccion = ({ className }) => {
               <span>Nuestra oficina en Google Maps</span>
             </a>
           </div>
+          <div className="link">
+            <a target='blank' href="tel:55-9171-2105">
+              <FaPhone />
+              <span>55-9171-2105    |    55-9172-1612</span>
+            </a>
+          </div>
         </Center>
       </Seccion>
     </div>
@@ -31,16 +37,18 @@ export default styled(Direccion)`
 }
 .direccion span {
   font-size: 0.9rem;
-  
+  min-width: 20rem
 }
 .link{
-  font-size: 1rem;
+  font-size: 1rem;;
 }
 .link span {
     font-size: 1rem;
     font-weight: 300;
     margin-left: 0.5rem;
     display: inline-block;
+    text-align: left;
+    margin-left: 2rem;
   }
 
   .link a {
@@ -49,6 +57,6 @@ export default styled(Direccion)`
     justify-content: center;
     font-size: 1.5rem;
     font-weight: 400;
-    margin: 2rem;
+    margin: 2rem 1rem 1rem;
     color: #16b186;
   }`

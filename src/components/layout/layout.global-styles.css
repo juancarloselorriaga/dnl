@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,900&display=swap');
 
 :root {
-  --primaryColor: #16b186;
+  --primaryColor: #007DC3; /*  #16b186 */
   --mainWhite: #fff;
   --offWhite:  #f7f6f9;  /* linear-gradient(180deg,#f7f6f9 0,#fff 100%); */
-  --mainBlack: #233748;
+  --mainBlack: #000E19; /* #233748 */
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
   --mainBlackText: #131726;

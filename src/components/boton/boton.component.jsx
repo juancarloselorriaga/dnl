@@ -24,15 +24,15 @@ export default styled(Boton)`
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.5px;
-  background: #16b186;
+  background: var(--primaryColor);
   color: #fff;
   display: inline-block;
   transition: all 0.3s linear;
   cursor: pointer;
-  border: ${props => props.contrast ? '2px solid white' : '2px solid #16b186'};
+  border: ${props => props.contrast ? '2px solid white' : '2px solid var(--primaryColor)'};
   border-radius: 100px;
   &:hover {
     background: transparent;
-    color: #16b186;
+    color: var(--primaryColor);
   }
 `

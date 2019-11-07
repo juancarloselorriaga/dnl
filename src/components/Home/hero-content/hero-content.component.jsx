@@ -32,12 +32,12 @@ const HeroContent = ({ className }) => {
 export default styled(HeroContent)`
   .particles-wrapper,
   .button-wrapper {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
 
   ${breakpoint("tablet")`
   .particles-wrapper, .button-wrapper {
-    margin-top: 2.5rem;
+    margin-top: 1rem;
   }
   `}
 
