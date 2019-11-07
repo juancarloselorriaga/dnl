@@ -15,7 +15,7 @@ const ContactForm = ({ className }) => {
   return (
     <div className={className}>
       <form
-        action="https://formspree.io/juancarlos@jjaas.mx"
+        action="https://formspree.io/contacto@dnlomas.mx"
         method="POST"
         className="form"
       >

@@ -35,7 +35,11 @@ const Subscribe = ({ className }) => {
         <span>
           Recibe nuestro newsletter mensual con tips para crecer tu negocio.
         </span>
-        <form>
+        <form
+          action="https://formspree.io/contacto@dnlomas.mx"
+          method="POST"
+          className="form"
+        >
           <InputButton
             handleSend={handleSend}
             onChange={handleInputChange}

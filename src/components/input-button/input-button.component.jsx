@@ -1,12 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-
-import { FaChevronCircleRight } from "react-icons/fa"
+import Boton from "../boton/boton.component"
 
 const InputButton = ({ className, handleSend, onChange }) => {
   return (
     <div className={className}>
-      
       <input
         type="email"
         name="email"
@@ -15,9 +13,9 @@ const InputButton = ({ className, handleSend, onChange }) => {
         placeholder="tu-email@dnl.mx"
         onChange={onChange}
       />
-      
+
       <div className="button" onClick={handleSend}>
-        <FaChevronCircleRight size="20" />
+        <Boton submit title="Suscribirse" />
       </div>
       <label htmlFor="email">Suscribirse</label>
     </div>
