@@ -15,7 +15,7 @@ const HeroContent = ({ className }) => {
           subtitle="Tu cliente ideal está allá fuera. Nosotros lo ayudaremos a encontrarte."
         />
         <div className="button-wrapper">
-          <Boton to="/contacto" title="Me interesa" />
+          <Boton to="/contacto" title="Me interesa" className="cta" />
         </div>
       </div>
       <div className="particles-wrapper">
@@ -33,6 +33,10 @@ export default styled(HeroContent)`
   .particles-wrapper,
   .button-wrapper {
     margin-top: 0rem;
+  }
+
+  .cta {
+    z-index: 9999;
   }
 
   ${breakpoint("tablet")`
