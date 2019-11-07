@@ -34,7 +34,7 @@ const Areas = () => {
   return (
     <Seccion offWhite>
       <Title title="Intégrate al mejor equipo para el crecimiento de tu negocio o servicio." />
-      <SectionDescription text="Contamos con tres áreas especializadas para cubrir tus necesidades de manera integral en un solo clic." />
+      <SectionDescription text="Contamos con tres áreas especializadas para cubrir tus necesidades de manera integral en un solo click." />
       <SectionDescription text="'“Es en los problemas donde se esconden las oportunidades” — Albert Einstein'" />
       <Center background>
         {areas.map(({ node }) => {
