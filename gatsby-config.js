@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: "DNL | Desarrollo de Negocios Lomas",
     description:
-      "Agencia mexicana de inbound marketing, te ayudamos a llegar al cliente que tú necesitas.",
+      "Agencia mexicana de inbound marketing y otros servicios, te ayudamos a llegar al cliente que tú necesitas.",
     author: "@juancarloselorriaga",
     twitterUsername: "@juancarlosverri",
     image: "/logo-desarrollo-de-negocios-lomas.png",
