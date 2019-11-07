@@ -3,7 +3,7 @@ import styled from "styled-components"
 const primaryColor = '#16b186'
 
 const RoundButton = styled.button`
-  background: ${primaryColor};
+  background: var(--primaryColor);
   font-size: 1rem;
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@ const RoundButton = styled.button`
   height: ${props => props.big ? '60px' : '48px'};
   border-radius: 50%;
   color: white;
-  border: 2px ${primaryColor} solid;
+  border: 2px var(--primaryColor) solid;
   position: ${props => props.floating ? 'fixed' : 'static'};
   bottom: 0.5rem;
   right: 0.5rem;
@@ -21,8 +21,8 @@ const RoundButton = styled.button`
   transition: all 0.25s ease-in;
   z-index: 9999;
   :hover {
-    color: ${primaryColor};
-    border-color: ${primaryColor};
+    color: var(--primaryColor);
+    border-color: var(--primaryColor);
     background: white;
   }
   @media (min-width: 992px) {
