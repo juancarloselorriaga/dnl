@@ -9,6 +9,6 @@ export default [
   },
   {
     path: "/contacto",
-    text: "contacto",
+    text: "Contacto",
   },
 ]

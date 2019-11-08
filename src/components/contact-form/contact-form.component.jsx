@@ -1,67 +1,27 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
-import breakpoint from 'styled-components-breakpoint';
+import breakpoint from "styled-components-breakpoint"
+import { navigate } from "gatsby"
 
-import Boton from "../boton/boton.component"
-import Decision from "../decision/decision.component"
+import HubspotForm from "react-hubspot-form"
 
 const ContactForm = ({ className }) => {
-  const [isChecked, setIsChecked] = useState(false)
-
-  const handleCheckboxUpdate = () => {
-    setIsChecked(isChecked => !isChecked)
-  }
-
   return (
     <div className={className}>
-      <form
-        action="https://formspree.io/contacto@dnlomas.mx"
-        method="POST"
-        className="form"
-      >
-        <div className='form-wrapper'>
-          <label htmlFor="name">nombre</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            className="form-control"
-            placeholder="juan pérez"
-          />
-          <label htmlFor="email">correo</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            className="form-control"
-            placeholder="email@dnl.mx"
-          />
-          <label htmlFor="message">mensaje</label>
-          <textarea
-            name="message"
-            id="message"
-            rows="10"
-            className="form-control"
-            placeholder="¿En qué te ayudamos?"
-          />
-        </div>
-        <Decision
-          light
-          isChecked={isChecked}
-          handleCheckboxUpdate={handleCheckboxUpdate}
-          label="Me quiero suscribir al newsletter mensual de DNL."
-        />
-        <div className="button-wrapper">
-          <Boton submit title="¡Contáctanos!" />
-        </div>
-      </form>
+      <HubspotForm
+        portalId="6339111"
+        formId="b36e39bb-3971-4d22-9b96-1a774d8dbde9"
+        onFormSubmit={() => console.log("submitss")}
+        onReady={form => console.log("")}
+        loading={<div className="hub-text">Cargando...</div>}
+      />
     </div>
   )
 }
 
 export default styled(ContactForm)`
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
   .form {
     width: 100%;
   }
@@ -86,6 +46,11 @@ justify-content: center;
     margin-bottom: 1rem;
   }
 
+  .hub-text {
+    font-size: 1.3rem;
+    color: var(--primaryColor);
+  }
+
   text-area {
     margin-bottom: 0px;
   }
@@ -98,13 +63,13 @@ justify-content: center;
     text-align: center;
   }
 
-  ${breakpoint('tablet')`
+  ${breakpoint("tablet")`
   .form {
     width: 75%;
   }
   `}
 
-  ${breakpoint('desktop')`
+  ${breakpoint("desktop")`
   .form {
     width: 60%;
   }

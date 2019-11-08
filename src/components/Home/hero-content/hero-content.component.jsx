@@ -12,7 +12,7 @@ const HeroContent = ({ className }) => {
       <div className='title-wrapper'>
         <HeroTitle
           title="La solución integral que tu empresa necesita."
-          subtitle="Tu cliente ideal está allá fuera. Nosotros lo ayudaremos a encontrarte."
+          subtitle="Tu cliente ideal está allá afuera. Nosotros lo ayudaremos a encontrarte."
         />
         <div className="button-wrapper">
           <Boton to="/contacto" title="Me interesa" className="cta" />
@@ -41,7 +41,7 @@ export default styled(HeroContent)`
 
   ${breakpoint("tablet")`
   .particles-wrapper, .button-wrapper {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
   `}
 

@@ -20,8 +20,7 @@ const Hero = ({ children, className, img }) => {
 export default styled(Hero)`
   width: 100%;
   min-height: calc(100vh - 80px);
-  background-position: top;
-  background-size: cover;
+  background-position: center;
   opacity: 1 !important;
   display: flex;
   justify-content: ${props => (props.home ? "flex-start" : "center")};
@@ -42,15 +41,14 @@ export default styled(Hero)`
   .background-image {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     opacity: 1 !important;
+    background-size: contain;
   }
 
   ${breakpoint("desktop")`
-    min-height: 60vh;
-    max-height: 80vh;
+    min-height: calc(100vh - 80px);
 
     .children {
-      min-height: 60vh;
-      max-height: 80vh;
+      min-height: calc(100vh - 80px);
   }
   `}
 `

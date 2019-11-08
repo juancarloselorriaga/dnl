@@ -37,10 +37,11 @@ export default styled(Card)`
   width: 100%;
   .card-media,
   &:before {
-    height: 150px;
+    height: 300px;
     border-top-left-radius: 11px;
     border-top-right-radius: 11px;
     overflow: hidden;
+    background-size: contain;
   }
 
   .card-content {
@@ -107,7 +108,7 @@ export default styled(Card)`
 
   ${breakpoint("desktop")`
     .card-content {
-      min-height: 100px;
+      min-height: 280px;
   }
   `}
 `

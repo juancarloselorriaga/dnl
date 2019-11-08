@@ -33,7 +33,7 @@ export default styled(Servicio)`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     margin: 1rem;
     color: var(--primaryColor);
   }

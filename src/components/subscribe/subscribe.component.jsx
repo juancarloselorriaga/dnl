@@ -28,7 +28,7 @@ const Subscribe = ({ className }) => {
         <h2>
           ¿Cómo conectar hoy mismo con el mundo digital para crecer tu negocio?
         </h2>
-        <Boton className="boton" title="¡Dímelo!" to="/contacto" />
+        <Boton className="boton" title="¡Conectar!" to="/contacto" />
       </div>
       <div className="subscribe">
         <h2>Suscríbete y entérate de lo último en negocios.</h2>
@@ -61,7 +61,6 @@ export default styled(Subscribe)`
 
   .title-wrapper h2,
   .subscribe h2 {
-    text-transform: capitalize;
     color: var(--mainWhite);
     font-size: 1.8rem;
   }

@@ -11,7 +11,6 @@ const HeroTitle = ({ title, className, subtitle, centered, smaller }) => {
 }
 
 export default styled(HeroTitle)`
-height: 100%;
 display: block;
 margin-top: 1.5rem;
 text-align: ${props => props.centered && 'center'};

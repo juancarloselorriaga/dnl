@@ -13,7 +13,7 @@ export default () => {
     <Layout>
       <SEO title="Contacto"/>
       <Hero centered>
-        <HeroTitle smaller centered title="Comienza a tener el negocio que siempre soñaste y atrae a los clientes indicados."/>
+        <HeroTitle smaller centered title="Felicidades!!! Con DNL tus negocios crecerán aún más."/>
       </Hero>
       <Contacto />
       <Direccion />

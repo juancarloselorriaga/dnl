@@ -27,9 +27,8 @@ const Footer = ({ className }) => {
         <div className="brand">
           <img src={Logo} alt="backroads logo" />
           <p>
-            Synergy Business, Legal Business y Web Business a tu alcance para
-            desarrollar estrategias integrales con el fin de diferenciar tu
-            producto o servicio en el mercado.
+            Web Business, Sinergy y Legal a tu alcance en el desarrollo de
+            estrategias integrales para ayudar a crecer tus negocios
           </p>
         </div>
         <div className="icons">
@@ -48,8 +47,8 @@ const Footer = ({ className }) => {
           })}
         </div>
         <div className="copyright">
-          marca registrada &copy; desarrollo de negocios lomas{" "}
-          {new Date().getFullYear()} todos los derechos reservados.
+          Desarrollo de Negocios Lomas es una marca en proceso de registro. {"  "}
+          {new Date().getFullYear()}
         </div>
         <div className="aviso-de-privacidad">
           <AniLink to="/aviso-de-privacidad">
@@ -124,7 +123,6 @@ export default styled(Footer)`
   }
   .copyright {
     margin: 1rem 0;
-    text-transform: capitalize;
     font-weight: 300;
     font-size: 0.6rem;
     text-align: left;
