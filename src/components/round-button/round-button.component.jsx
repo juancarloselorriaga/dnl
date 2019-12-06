@@ -1,7 +1,5 @@
 import styled from "styled-components"
 
-const primaryColor = '#16b186'
-
 const RoundButton = styled.button`
   background: var(--primaryColor);
   font-size: 1rem;

@@ -40,7 +40,7 @@ module.exports = {
       options: {
         trackingId: "UA-154123504-1",
       },
-    }
+    },
     `gatsby-plugin-transition-link`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import breakpoint from "styled-components-breakpoint"
-import { navigate } from "gatsby"
+// import { navigate } from "gatsby"
 
 import HubspotForm from "react-hubspot-form"
 
@@ -11,8 +11,8 @@ const ContactForm = ({ className }) => {
       <HubspotForm
         portalId="6339111"
         formId="b36e39bb-3971-4d22-9b96-1a774d8dbde9"
-        onFormSubmit={() => console.log("submitss")}
-        onReady={form => console.log("")}
+        onFormSubmit={() => console.log("submits")}
+        onReady={form => console.log("ready")}
         loading={<div className="hub-text">Cargando...</div>}
       />
     </div>
