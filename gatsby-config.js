@@ -10,7 +10,7 @@ module.exports = {
     author: "@juancarloselorriaga",
     twitterUsername: "@juancarlosverri",
     image: "/logo-desarrollo-de-negocios-lomas.png",
-    siteUrl: "https://dnl.netlify.com",
+    siteUrl: "https://www.dnlomas.mx",
   },
   plugins: [
     {
@@ -30,11 +30,17 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://dnl.netlify.com',
-        sitemap: 'https://dnl.netlify.com/sitemap.xml',
+        host: 'https://www.dnlomas.mx"',
+        sitemap: 'https://www.dnlomas.mx"/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-154123504-1",
+      },
+    }
     `gatsby-plugin-transition-link`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
