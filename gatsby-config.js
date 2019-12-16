@@ -1,5 +1,5 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
@@ -23,22 +23,28 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID, 
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
         host: 'https://www.dnlomas.mx"',
         sitemap: 'https://www.dnlomas.mx"/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-154123504-1",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: "2214878792146845",
       },
     },
     `gatsby-plugin-transition-link`,
@@ -47,6 +53,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-playground`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
   ],
 }
