@@ -31,7 +31,7 @@ const AreaTemplate = ({ data, className }) => {
     <SEO title={title} />
       <Hero centered extraBottom img={backgroundImage} className={className}>
         <HeroTitle centered smaller title={title} subtitle={resumen.resumen} />
-        <Boton className="boton" title="¡Contáctanos!" />
+        <Boton className="boton" title="¡Contáctanos!" to='/contacto' />
       </Hero>
       <Seccion white arched className={className}>
         <Center white arched>
