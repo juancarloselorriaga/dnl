@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import breakpoint from 'styled-components-breakpoint';
+import breakpoint from "styled-components-breakpoint"
 
 const Decision = ({ handleCheckboxUpdate, isChecked, label, className }) => {
   return (
@@ -80,7 +80,8 @@ export default styled(Decision)`
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke: ${props => (props.light ? "var(--primaryColor)" : "var(--mainWhite)")};
+    stroke: ${props =>
+      props.light ? "var(--primaryColor)" : "var(--mainWhite)"};
     stroke-width: 1.5;
     transform: translate3d(0, 0, 0);
     transition: all 0.2s ease;
@@ -97,10 +98,12 @@ export default styled(Decision)`
     opacity: 1;
   }
   .check:hover svg {
-    stroke: ${props => (props.light ? "var(--primaryColor)" : "var(--mainWhite)")};
+    stroke: ${props =>
+      props.light ? "var(--primaryColor)" : "var(--mainWhite)"};
   }
   #cbx:checked + .check svg {
-    stroke: ${props => (props.light ? "var(--primaryColor)" : "var(--mainWhite)")};
+    stroke: ${props =>
+      props.light ? "var(--primaryColor)" : "var(--mainWhite)"};
   }
   #cbx:checked + .check svg path {
     stroke-dashoffset: 60;
@@ -112,9 +115,8 @@ export default styled(Decision)`
     transition-delay: 0.15s;
   }
 
-  ${breakpoint('tablet')`
+  ${breakpoint("tablet")`
     display: flex;
     justify-content: center;
   `}
-  
 `

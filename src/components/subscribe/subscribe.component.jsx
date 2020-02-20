@@ -62,7 +62,7 @@ export default styled(Subscribe)`
   .title-wrapper h2,
   .subscribe h2 {
     color: var(--mainWhite);
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .subscribe span {
@@ -76,12 +76,17 @@ export default styled(Subscribe)`
   }
 
   ${breakpoint("tablet")`
-    .subscribe {
-      width: 50%;
+  padding: ${props => (!props.noBottom ? "8rem 4.5rem" : "4rem 4.5rem")};
+  .title-wrapper h2,
+    .subscribe h2 {
+      font-size: 1.6rem;
     }
   `}
 
-  ${breakpoint("tablet")`
-  padding: ${props => (!props.noBottom ? "8rem 4.5rem" : "4rem 4.5rem")};
+  ${breakpoint("desktop")`
+    .title-wrapper h2,
+    .subscribe h2 {
+      font-size: 1.8rem;
+    }
   `}
 `
