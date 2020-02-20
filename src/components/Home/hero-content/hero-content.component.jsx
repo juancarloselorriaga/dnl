@@ -9,7 +9,7 @@ import HeroTitle from "../../hero-title/hero-title.component"
 const HeroContent = ({ className }) => {
   return (
     <div className={className}>
-      <div className='title-wrapper'>
+      <div className="title-wrapper">
         <HeroTitle
           title="La solución integral que tu empresa necesita."
           subtitle="Tu cliente ideal está allá afuera. Nosotros lo ayudaremos a encontrarte."
@@ -30,8 +30,12 @@ const HeroContent = ({ className }) => {
 }
 
 export default styled(HeroContent)`
-  .particles-wrapper,
+  .title-wrapper,
   .button-wrapper {
+    margin: 1rem 0;
+  }
+
+  .particles-wrapper {
     margin-top: 0rem;
   }
 
@@ -45,7 +49,7 @@ export default styled(HeroContent)`
   }
   `}
 
-  ${breakpoint('desktop')`
+  ${breakpoint("desktop")`
     display: flex;
     justify-content: space-between;
 

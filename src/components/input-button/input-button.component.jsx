@@ -14,8 +14,8 @@ const InputButton = ({ className, handleSend, onChange }) => {
         onChange={onChange}
       />
 
-      <div className="button" onClick={handleSend}>
-        <Boton submit title="Suscribirse" />
+      <div className="button">
+        <Boton submit title="Suscribirse" onClick={handleSend} />
       </div>
       <label htmlFor="email">Suscribirse</label>
     </div>

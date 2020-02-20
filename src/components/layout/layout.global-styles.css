@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,900&display=swap");
 
 :root {
-  --primaryColor: #007DC3; /*  #16b186 */
+  --primaryColor: #007dc3; /*  #16b186 */
   --mainWhite: #fff;
-  --offWhite:  #f7f6f9;  /* linear-gradient(180deg,#f7f6f9 0,#fff 100%); */
-  --mainBlack: #000E19; /* #233748 */
+  --offWhite: #f7f6f9; /* linear-gradient(180deg,#f7f6f9 0,#fff 100%); */
+  --mainBlack: #000e19; /* #233748 */
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
   --mainBlackText: #131726;
@@ -12,8 +12,8 @@
   --mainSpacing: 0.5px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-  --smoothSmallShadow: 0px 3px 10px rgba(0,0,0,0.12);
-  --smoothShadow: 0px 18px 40px -12px rgba(0,0,0,0.35)
+  --smoothSmallShadow: 0px 3px 10px rgba(0, 0, 0, 0.12);
+  --smoothShadow: 0px 18px 40px -12px rgba(0, 0, 0, 0.35);
 }
 
 * {

@@ -13,7 +13,7 @@ export default () => {
   return (
     <Layout>
       <SEO title="Inicio" />
-      <Hero extraBottom home="true">
+      <Hero centered extraBottom home="true">
         <HeroContent />
       </Hero>
       <About />

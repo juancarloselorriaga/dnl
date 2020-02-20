@@ -23,7 +23,7 @@
 }
 
 .about-info h4 {
-  font-size: 1.9rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   text-align: left;
 }
@@ -48,6 +48,10 @@
     width: 80%;
   }
 
+  .about-info h4 {
+    font-size: 1.9rem;
+  }
+
   .about-info {
     display: flex;
     justify-content: center;
@@ -55,12 +59,12 @@
   }
 }
 @media screen and (min-width: 992px) {
-
   .about-wrapper {
     display: flex;
   }
 
-  .image-wrapper, .about-info {
+  .image-wrapper,
+  .about-info {
     width: 45%;
   }
 }

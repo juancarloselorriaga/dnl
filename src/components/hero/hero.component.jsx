@@ -3,15 +3,21 @@ import styled from "styled-components"
 import breakpoint from "styled-components-breakpoint"
 import BackgroundImage from "gatsby-background-image"
 
+import Container from "../container/container.component"
+
 const Hero = ({ children, className, img }) => {
   return (
     <section className={className}>
       {img ? (
         <BackgroundImage className="background-image" fluid={img.fluid}>
-          <div className="children">{children}</div>
+          <div className="children">
+            <Container>{children}</Container>
+          </div>
         </BackgroundImage>
       ) : (
-        <div className="children">{children}</div>
+        <div className="children">
+          <Container>{children}</Container>
+        </div>
       )}
     </section>
   )
@@ -43,6 +49,10 @@ export default styled(Hero)`
     opacity: 1 !important;
     background-size: contain;
   }
+
+  ${breakpoint("tablet")`
+    padding: 0 2rem;
+  `}
 
   ${breakpoint("desktop")`
     min-height: calc(100vh - 80px);

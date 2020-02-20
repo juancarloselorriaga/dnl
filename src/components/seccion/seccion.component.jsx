@@ -26,7 +26,7 @@ const Seccion = ({ children, className, arched }) => {
 
 export default styled(Seccion)`
   .normal {
-    padding: ${props => props.extraBottom ? "8rem 0" : "4rem 0"};
+    padding: ${props => (props.extraBottom ? "8rem 0" : "4rem 0")};
     background: ${props =>
       props.white
         ? "var(--mainWhite)"
@@ -39,7 +39,7 @@ export default styled(Seccion)`
     background: var(--offWhite);
     text-align: center;
     background-color: var(--mainWhite);
-    padding-bottom: ${props => (props.footer && "0")};
+    padding-bottom: ${props => props.footer && "0"};
   }
   .svg path {
     fill: ${props =>
