@@ -23,7 +23,11 @@ const Center = ({ children, className, background, arched }) => {
 export default styled(Center)`
   padding: 1.3rem;
   background: ${props =>
-      props.white ? "var(--mainWhite)" : "var(--offWhite)"};
+    props.black
+      ? "var(--mainBlack)"
+      : props.white
+      ? "var(--mainWhite)"
+      : "var(--offWhite)"};
 
   .center-background {
     display: flex;
@@ -44,7 +48,6 @@ export default styled(Center)`
     align-items: center;
     justify-content: center;
     border-radius: 11px;
-    
 
     text-align: ${props => props.center && "center"};
   }
@@ -58,6 +61,10 @@ export default styled(Center)`
     text-align: left;
     width: 100%;
   }
+
+  ${breakpoint("tablet")`
+    padding: 1.3rem 3rem;
+  `}
 
   ${breakpoint("desktop")`
     padding: 1.3rem 4.5rem;

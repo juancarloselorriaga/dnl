@@ -25,8 +25,12 @@ const Seccion = ({ children, className, arched }) => {
 }
 
 export default styled(Seccion)`
+  position: relative;
   .normal {
-    padding: ${props => (props.extraBottom ? "8rem 0" : "4rem 0")};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     background: ${props =>
       props.white
         ? "var(--mainWhite)"
@@ -36,6 +40,10 @@ export default styled(Seccion)`
     border-bottom: 0.5px var(--mainGrey) solid;
   }
   .arched {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     background: var(--offWhite);
     text-align: center;
     background-color: var(--mainWhite);

@@ -99,7 +99,7 @@ export default styled(Card)`
   }
 
   ${breakpoint("tablet")`
-    width: 40%;
+    width: 100%;
     margin: 1.3rem;
     .card-content {
       min-height: 280px;
@@ -107,6 +107,7 @@ export default styled(Card)`
   `}
 
   ${breakpoint("desktop")`
+    width: 40%;
     .card-content {
       min-height: 280px;
   }

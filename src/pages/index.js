@@ -5,6 +5,7 @@ import Hero from "../components/hero/hero.component"
 import HeroContent from "../components/Home/hero-content/hero-content.component"
 import About from "../components/Home/about/about.component"
 import Areas from "../components/Home/areas/areas.component"
+import Clientes from "../components/Home/customers/customers.component"
 import BlogPosts from "../components/blog-posts/blog-posts.component"
 import Subscribe from "../components/subscribe/subscribe.component"
 import SEO from "../components/SEO/SEO.component"
@@ -19,6 +20,7 @@ export default () => {
       <About />
       <Areas />
       <BlogPosts />
+      <Clientes />
       <Subscribe />
     </Layout>
   )

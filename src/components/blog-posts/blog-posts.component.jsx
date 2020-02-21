@@ -7,6 +7,7 @@ import Card from "../card/card.component"
 import Boton from "../boton/boton.component"
 import Seccion from "../seccion/seccion.component"
 import Center from "../center/center.component"
+import Container from "../container/container.component"
 
 const getBlogPosts = graphql`
   query {
@@ -39,23 +40,24 @@ const BlogPosts = ({ className }) => {
   const blogPosts = response.blogPosts.edges
   return (
     <Seccion offWhite className={className}>
-      <Title title="Noticias, tendencias y blog." />
-      <Center>
-        {blogPosts.map(({ node }) => {
-          return (
-            <Card
-              key={node.id}
-              content={node.resumen.resumen}
-              items={node}
-              textoBoton="Leer artículo"
-            />
-          )
-        })}
-      </Center>
-
-      <div className="button-wrapper">
-        <Boton to="/blog" title="Leer más artículos" />
-      </div>
+      <Container offWhite padding>
+        <Center offWhite>
+          <Title title="Noticias, tendencias y blog." />
+          {blogPosts.map(({ node }) => {
+            return (
+              <Card
+                key={node.id}
+                content={node.resumen.resumen}
+                items={node}
+                textoBoton="Leer artículo"
+              />
+            )
+          })}
+        </Center>
+        <div className="button-wrapper">
+          <Boton to="/blog" title="Leer más artículos" />
+        </div>
+      </Container>
     </Seccion>
   )
 }

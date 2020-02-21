@@ -31,7 +31,7 @@ const getUs = graphql`
             bio
           }
           foto {
-            fluid {
+            fluid(maxHeight: 300, maxWidth: 300) {
               ...GatsbyContentfulFluid
             }
           }

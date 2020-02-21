@@ -3,8 +3,6 @@ import styled from "styled-components"
 import breakpoint from "styled-components-breakpoint"
 import Img from "gatsby-image"
 
-import { FaLongArrowAltRight } from "react-icons/fa"
-
 const BioCard = ({ className, items }) => {
   const {
     nombre,
@@ -49,7 +47,6 @@ export default styled(BioCard)`
   }
 
   .card-media div {
-    height: 300px;
     border-radius: 11px;
     box-shadow: var(--smoothSmallShadow);
   }
@@ -72,7 +69,6 @@ export default styled(BioCard)`
 
   ${breakpoint("tablet")`
   .card-media div {
-    height: 100%;
     border-radius: 11px;
     box-shadow: var(--smoothSmallShadow);
   }
@@ -84,7 +80,6 @@ export default styled(BioCard)`
     overflow: hidden;
 
     .card-media div {
-      max-height: 300px;
       border-radius: 11px;
       box-shadow: var(--smoothSmallShadow);
   }

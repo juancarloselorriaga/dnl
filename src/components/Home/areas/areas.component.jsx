@@ -7,6 +7,7 @@ import SectionDescription from "../../section-description/section-description.co
 import Seccion from "../../seccion/seccion.component"
 import Center from "../../center/center.component"
 import Servicio from "../../servicio/servicio.component"
+import Container from "../../container/container.component"
 
 const getAreas = graphql`
   query {
@@ -33,18 +34,20 @@ const Areas = () => {
 
   return (
     <Seccion offWhite>
-      <Title title="Intégrate al mejor equipo para el crecimiento de tu negocio o servicio." />
-      <SectionDescription text="Contamos con tres áreas especializadas para cubrir tus necesidades de manera integral en un solo click." />
-      <SectionDescription text="'“Es en los problemas donde se esconden las oportunidades” — Albert Einstein'" />
-      <Center background>
-        {areas.map(({ node }) => {
-          return (
-            <Servicio key={node.id} title={node.title} slug={node.slug}>
-              <Img fixed={node.img.fixed} />
-            </Servicio>
-          )
-        })}
-      </Center>
+      <Container offWhite padding>
+        <Center offWhite>
+          <Title title="Intégrate al mejor equipo para el crecimiento de tu negocio o servicio." />
+          <SectionDescription text="Contamos con tres áreas especializadas para cubrir tus necesidades de manera integral en un solo click." />
+          <SectionDescription text="'“Es en los problemas donde se esconden las oportunidades” — Albert Einstein'" />
+          {areas.map(({ node }) => {
+            return (
+              <Servicio key={node.id} title={node.title} slug={node.slug}>
+                <Img fixed={node.img.fixed} />
+              </Servicio>
+            )
+          })}
+        </Center>
+      </Container>
     </Seccion>
   )
 }

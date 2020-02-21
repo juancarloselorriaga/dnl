@@ -1,5 +1,5 @@
 .about-info p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 300;
   margin: 3rem 0 1rem 0;
 }
@@ -24,8 +24,7 @@
 
 .about-info h4 {
   font-size: 1.3rem;
-  text-transform: uppercase;
-  text-align: left;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -42,9 +41,10 @@
     margin: 0;
   }
   .about-img img {
-    max-height: 500px;
+    max-height: 150px;
   }
   .about-info p {
+    font-size: 1.3rem;
     width: 80%;
   }
 
@@ -66,6 +66,7 @@
   .image-wrapper,
   .about-info {
     width: 45%;
+    height: 200px;
   }
 }
 

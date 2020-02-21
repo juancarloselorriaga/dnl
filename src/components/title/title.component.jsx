@@ -12,13 +12,12 @@ const Title = ({ title, className }) => {
 }
 
 export default styled(Title)`
-  margin-bottom: 2 rem;
-  padding: 0 1.3rem;
+  margin-bottom: 2rem;
   width: 100%;
   h5 {
     text-align: center;
     letter-spacing: 0.5px;
-    font-size: 1.5rem
+    font-size: 1.3rem;
   }
   .title {
     color: var(--mainBlack);
@@ -30,6 +29,9 @@ export default styled(Title)`
     span {
       display: inline-block;
       margin: 0 0.35rem;
+    }
+    h5 {
+      font-size: 1.9rem;
     }
   }
 `

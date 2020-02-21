@@ -4,7 +4,7 @@ import styled from "styled-components"
 const SectionDescription = ({ text, className, noExtraPadding }) => {
   return (
     <div className={className}>
-        <p className="text">{text}</p>
+      <p className="text">{text}</p>
     </div>
   )
 }
@@ -12,14 +12,11 @@ const SectionDescription = ({ text, className, noExtraPadding }) => {
 export default styled(SectionDescription)`
   font-size: 1rem;
   font-weight: 300;
-  margin: 2 rem;
-  padding: 0 1.3rem;
+  margin: 0.5rem 0;
   p {
-    text-align: center;
-    letter-spacing: 0.5px; 
-    line-height: 200%;
-    margin: 2rem 0;
-
+    text-align: left;
+    letter-spacing: 0.5px;
+    line-height: 125%;
   }
   .text {
     color: var(--mainBlack);
@@ -28,6 +25,7 @@ export default styled(SectionDescription)`
     display: block;
   }
   @media (min-width: 576px) {
+    font-size: 1.3rem;
     span {
       display: inline-block;
       margin: 0 0.35rem;
@@ -35,6 +33,6 @@ export default styled(SectionDescription)`
   }
 
   @media (min-width: 992px) {
-    padding: ${props => props.noExtraPadding ? '0' : '0 4.5rem'}
+    padding: ${props => (props.noExtraPadding ? "0" : "0 4.5rem")};
   }
 `

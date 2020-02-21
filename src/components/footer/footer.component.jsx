@@ -5,6 +5,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Seccion from "../seccion/seccion.component"
 import Center from "../center/center.component"
+import Container from "../container/container.component"
 
 import links from "../../constants/links/links.constant"
 import socialIcons from "../../constants/social-icons/social-icons.constant"
@@ -14,48 +15,51 @@ import Logo from "../../assets/logoWhite.svg"
 const Footer = ({ className }) => {
   return (
     <Seccion offWhite arched footer className={className}>
-      <Center offWhite>
-        <div className="links">
-          {links.map((item, index) => {
-            return (
-              <AniLink key={index} fade to={item.path}>
-                {item.text}
-              </AniLink>
-            )
-          })}
-        </div>
-        <div className="brand">
-          <img src={Logo} alt="backroads logo" />
-          <p>
-            Web Business, Sinergy y Legal a tu alcance en el desarrollo de
-            estrategias integrales para ayudar a crecer tus negocios
-          </p>
-        </div>
-        <div className="icons">
-          {socialIcons.map((item, index) => {
-            return (
-              <a
-                key={index}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={item.title}
-              >
-                {item.icon}
-              </a>
-            )
-          })}
-        </div>
-        <div className="copyright">
-          Desarrollo de Negocios Lomas es una marca en proceso de registro. {"  "}
-          {new Date().getFullYear()}
-        </div>
-        <div className="aviso-de-privacidad">
-          <AniLink to="/aviso-de-privacidad">
-            <span>Aviso de privacidad</span>
-          </AniLink>
-        </div>
-      </Center>
+      <Container offWhite padding>
+        <Center offWhite>
+          <div className="links">
+            {links.map((item, index) => {
+              return (
+                <AniLink key={index} fade to={item.path}>
+                  {item.text}
+                </AniLink>
+              )
+            })}
+          </div>
+          <div className="brand">
+            <img src={Logo} alt="backroads logo" />
+            <p>
+              Web Business, Sinergy y Legal a tu alcance en el desarrollo de
+              estrategias integrales para ayudar a crecer tus negocios
+            </p>
+          </div>
+          <div className="icons">
+            {socialIcons.map((item, index) => {
+              return (
+                <a
+                  key={index}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.title}
+                >
+                  {item.icon}
+                </a>
+              )
+            })}
+          </div>
+          <div className="copyright">
+            Desarrollo de Negocios Lomas es una marca en proceso de registro.{" "}
+            {"  "}
+            {new Date().getFullYear()}
+          </div>
+          <div className="aviso-de-privacidad">
+            <AniLink to="/aviso-de-privacidad">
+              <span>Aviso de privacidad</span>
+            </AniLink>
+          </div>
+        </Center>
+      </Container>
     </Seccion>
   )
 }
