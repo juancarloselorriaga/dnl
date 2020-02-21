@@ -27,7 +27,7 @@ const Subscribe = ({ className }) => {
 
   return (
     <Seccion className={className}>
-      <Container padding>
+      <Container padding arched>
         <Center black>
           <div className="title-wrapper">
             <h2>
