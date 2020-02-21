@@ -9,6 +9,7 @@ import HeroTitle from "../../components/hero-title/hero-title.component"
 import Boton from "../../components/boton/boton.component"
 import Subscribe from "../../components/subscribe/subscribe.component"
 import Seccion from "../../components/seccion/seccion.component"
+import Container from "../../components/container/container.component"
 import Center from "../../components/center/center.component"
 import BlogPosts from "../../components/blog-posts/blog-posts.component"
 import SEO from "../../components/SEO/SEO.component"
@@ -42,7 +43,7 @@ const BlogPostTemplate = ({ data, className }) => {
 
   return (
     <Layout>
-    <SEO title={title} />
+      <SEO title={title} />
       <div className={className}>
         <Hero centered extraBottom img={imagen}>
           <HeroTitle centered smaller title={title} />
@@ -52,15 +53,19 @@ const BlogPostTemplate = ({ data, className }) => {
           </div>
         </Hero>
         <Seccion white arched>
-          <Center white arched>
-            <div className="publicado-el">
-              <span>Publicado el {publicado}</span>
-            </div>
-            <article className="post">
-              {documentToReactComponents(json, options)}
-            </article>
-            <Boton title="todos los posts" to="/blog" />
-          </Center>
+          <Container padding>
+            <Center white arched>
+              <div className="post-wrapper">
+                <div className="publicado-el">
+                  <span>Publicado el {publicado}</span>
+                </div>
+                <article className="post">
+                  {documentToReactComponents(json, options)}
+                </article>
+                <Boton title="todos los posts" to="/blog" />
+              </div>
+            </Center>
+          </Container>
         </Seccion>
         <BlogPosts />
         <Subscribe />
@@ -105,6 +110,12 @@ export default styled(BlogPostTemplate)`
 
   .publicado-el {
     margin: 4rem 0;
+  }
+
+  .post-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .post p {

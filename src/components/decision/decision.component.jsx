@@ -114,9 +114,4 @@ export default styled(Decision)`
     transition: all 0.2s linear;
     transition-delay: 0.15s;
   }
-
-  ${breakpoint("tablet")`
-    display: flex;
-    justify-content: center;
-  `}
 `
