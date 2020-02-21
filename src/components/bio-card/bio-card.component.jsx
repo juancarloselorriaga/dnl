@@ -76,7 +76,7 @@ export default styled(BioCard)`
 
   ${breakpoint("desktop")`
     width: 30%;
-    height: 650px;
+    height: auto;
     overflow: hidden;
 
     .card-media div {

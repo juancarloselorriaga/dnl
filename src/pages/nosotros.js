@@ -7,6 +7,7 @@ import Hero from "../components/hero/hero.component"
 import HeroTitle from "../components/hero-title/hero-title.component"
 import Subscribe from "../components/subscribe/subscribe.component"
 import Seccion from "../components/seccion/seccion.component"
+import Container from "../components/container/container.component"
 import Center from "../components/center/center.component"
 import BioCard from "../components/bio-card/bio-card.component"
 import Title from "../components/title/title.component"
@@ -58,14 +59,16 @@ const Nosotros = ({ className }) => {
         />
       </Hero>
       <Seccion white arched>
-        <Center white>
-          <Title title="Equipo DNL" />
-          <div className={className}>
-            {team.map(({ node }) => {
-              return <BioCard key={node.id} items={node} />
-            })}
-          </div>
-        </Center>
+        <Container padding>
+          <Center white>
+            <Title title="Equipo DNL" />
+            <div className={className}>
+              {team.map(({ node }) => {
+                return <BioCard key={node.id} items={node} />
+              })}
+            </div>
+          </Center>
+        </Container>
       </Seccion>
       <Subscribe />
     </Layout>
@@ -75,7 +78,7 @@ const Nosotros = ({ className }) => {
 export default styled(Nosotros)`
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
 `
