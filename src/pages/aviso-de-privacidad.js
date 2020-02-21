@@ -8,6 +8,7 @@ import Hero from "../components/hero/hero.component"
 import HeroTitle from "../components/hero-title/hero-title.component"
 import Subscribe from "../components/subscribe/subscribe.component"
 import Seccion from "../components/seccion/seccion.component"
+import Container from "../components/container/container.component"
 import Center from "../components/center/center.component"
 import SEO from "../components/SEO/SEO.component"
 
@@ -38,16 +39,18 @@ const AvisoDePrivacidad = ({ className }) => {
           <HeroTitle smaller centered title="Aviso de privacidad" />
         </Hero>
         <Seccion arched centered white>
-          <Center arched centered white>
-            {aviso.map(({ node }) => {
-              const jsonContent = node.avisoDePrivacidad.json
-              return (
-                <article className="post" key={node.id}>
-                  {documentToReactComponents(jsonContent)}
-                </article>
-              )
-            })}
-          </Center>
+          <Container padding>
+            <Center arched centered white>
+              {aviso.map(({ node }) => {
+                const jsonContent = node.avisoDePrivacidad.json
+                return (
+                  <article className="post" key={node.id}>
+                    {documentToReactComponents(jsonContent)}
+                  </article>
+                )
+              })}
+            </Center>
+          </Container>
         </Seccion>
         <Subscribe />
       </div>

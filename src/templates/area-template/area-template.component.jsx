@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import breakpoint from 'styled-components-breakpoint';
+import breakpoint from "styled-components-breakpoint"
 
 import Layout from "../../components/layout/layout.component"
 import Hero from "../../components/hero/hero.component"
@@ -9,6 +9,7 @@ import HeroTitle from "../../components/hero-title/hero-title.component"
 import Boton from "../../components/boton/boton.component"
 import Subscribe from "../../components/subscribe/subscribe.component"
 import Seccion from "../../components/seccion/seccion.component"
+import Container from "../../components/container/container.component"
 import Center from "../../components/center/center.component"
 import ArchedImage from "../../components/arched-image/arched-image.component"
 import Title from "../../components/title/title.component"
@@ -28,26 +29,30 @@ const AreaTemplate = ({ data, className }) => {
 
   return (
     <Layout>
-    <SEO title={title} />
+      <SEO title={title} />
       <Hero centered extraBottom img={backgroundImage} className={className}>
         <HeroTitle centered smaller title={title} subtitle={resumen.resumen} />
-        <Boton className="boton" title="¡Contáctanos!" to='/contacto' />
+        <div className="button-wrapper">
+          <Boton className="boton" title="¡Contáctanos!" to="/contacto" />
+        </div>
       </Hero>
       <Seccion white arched className={className}>
-        <Center white arched>
-          <div className="area-wrapper">
-            <div className="image-wrapper">
-              <ArchedImage img={logo.fluid} />
+        <Container padding>
+          <Center white arched>
+            <div className="area-wrapper">
+              <div className="image-wrapper">
+                <ArchedImage img={logo.fluid} />
+              </div>
+              <article className="area-info">
+                <Title title={subtitulo} />
+                <SectionDescription
+                  noExtraPadding
+                  text={contenidoSubtitulo.contenidoSubtitulo}
+                />
+              </article>
             </div>
-            <article className="area-info">
-              <Title title={subtitulo} />
-              <SectionDescription
-              noExtraPadding
-                text={contenidoSubtitulo.contenidoSubtitulo}
-              />
-            </article>
-          </div>
-        </Center>
+          </Center>
+        </Container>
       </Seccion>
       <Areas />
       <Subscribe />
@@ -81,11 +86,15 @@ export const query = graphql`
 `
 
 export default styled(AreaTemplate)`
+  .button-wrapper {
+    text-align: center;
+  }
+
   .boton {
     margin-top: 1.5rem;
   }
 
-  ${breakpoint('desktop')`
+  ${breakpoint("desktop")`
   .area-wrapper {
     display: flex;
   }
