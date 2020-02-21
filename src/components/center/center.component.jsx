@@ -48,7 +48,6 @@ export default styled(Center)`
     align-items: center;
     justify-content: center;
     border-radius: 11px;
-
     text-align: ${props => props.center && "center"};
   }
   .arched {

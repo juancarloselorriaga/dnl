@@ -61,12 +61,13 @@
 @media screen and (min-width: 992px) {
   .about-wrapper {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .image-wrapper,
   .about-info {
-    width: 45%;
-    height: 200px;
+    width: 50%;
   }
 }
 

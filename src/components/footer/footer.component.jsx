@@ -129,7 +129,7 @@ export default styled(Footer)`
     margin: 1rem 0;
     font-weight: 300;
     font-size: 0.6rem;
-    text-align: left;
+    text-align: center;
     letter-spacing: var(--mainSpacing);
     color: var(--mainBlackText);
     line-height: 2;

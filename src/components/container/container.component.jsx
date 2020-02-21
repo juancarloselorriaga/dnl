@@ -18,5 +18,6 @@ export default styled(Container)`
   `}
 
   ${breakpoint("desktop")`
+  padding: ${props => props.padding && "4rem 0"};
   `}
 `

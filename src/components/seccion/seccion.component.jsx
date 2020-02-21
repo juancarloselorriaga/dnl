@@ -46,7 +46,12 @@ export default styled(Seccion)`
     width: 100%;
     background: var(--offWhite);
     text-align: center;
-    background-color: var(--mainWhite);
+    background: ${props =>
+      props.white
+        ? "var(--mainWhite)"
+        : props.offWhite
+        ? "var(--offWhite)"
+        : ""};
     padding-bottom: ${props => props.footer && "0"};
   }
   .svg path {

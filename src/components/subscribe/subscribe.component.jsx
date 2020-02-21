@@ -82,6 +82,9 @@ export default styled(Subscribe)`
   }
 
   ${breakpoint("tablet")`
+  .subscribe {
+      flex-grow: 1;
+    }
   .title-wrapper h2,
     .subscribe h2 {
       font-size: 1.6rem;
