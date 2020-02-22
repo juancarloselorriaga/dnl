@@ -20,6 +20,7 @@ import WebBusinessServicesComponent from "../../components/web-business-services
 
 const AreaTemplate = ({ data, className }) => {
   const {
+    slug,
     title,
     resumen,
     backgroundImage,
@@ -55,7 +56,7 @@ const AreaTemplate = ({ data, className }) => {
           </Center>
         </Container>
       </Seccion>
-      {title === "DNL Web Business" && <WebBusinessServicesComponent />}
+      {slug === "dnl-web-business" && <WebBusinessServicesComponent />}
       <Areas />
       <Subscribe />
     </Layout>
@@ -65,6 +66,7 @@ const AreaTemplate = ({ data, className }) => {
 export const query = graphql`
   query($slug: String!) {
     area: contentfulAreas(slug: { eq: $slug }) {
+      slug
       title
       resumen {
         resumen

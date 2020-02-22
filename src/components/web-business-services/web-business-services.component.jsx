@@ -8,7 +8,6 @@ import Title from "../../components/title/title.component"
 import SectionDescription from "../../components/section-description/section-description.component"
 import Seccion from "../../components/seccion/seccion.component"
 import Center from "../../components/center/center.component"
-import Servicio from "../../components/servicio/servicio.component"
 import Container from "../../components/container/container.component"
 
 const getWebBusinessServices = graphql`
@@ -38,9 +37,9 @@ const WebBusinessServices = ({ className }) => {
   const services = response.services.edges
 
   return (
-    <Seccion offWhite>
-      <Container offWhite padding>
-        <Center offWhite>
+    <Center>
+      <Container padding>
+        <Center>
           <Title title="Áreas de especialidad" />
           <SectionDescription text="Con nuestra experiencia digital, te ayudamos en ésta nueva era de los negocios." />
           <div className={className}>
@@ -58,7 +57,7 @@ const WebBusinessServices = ({ className }) => {
           </div>
         </Center>
       </Container>
-    </Seccion>
+    </Center>
   )
 }
 
@@ -69,6 +68,7 @@ export default styled(WebBusinessServices)`
   width: 100%;
 
   .service-card {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,5 +88,10 @@ export default styled(WebBusinessServices)`
     font-size: 0.8rem;
     font-weight: 300;
     text-align: left;
+  }
+
+  article,
+  article ul {
+    width: 100%;
   }
 `
