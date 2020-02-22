@@ -16,6 +16,7 @@ import Title from "../../components/title/title.component"
 import SectionDescription from "../../components/section-description/section-description.component"
 import Areas from "../../components/Home/areas/areas.component"
 import SEO from "../../components/SEO/SEO.component"
+import WebBusinessServicesComponent from "../../components/web-business-services/web-business-services.component"
 
 const AreaTemplate = ({ data, className }) => {
   const {
@@ -54,6 +55,7 @@ const AreaTemplate = ({ data, className }) => {
           </Center>
         </Container>
       </Seccion>
+      {title === "DNL Web Business" && <WebBusinessServicesComponent />}
       <Areas />
       <Subscribe />
     </Layout>
