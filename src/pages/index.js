@@ -20,7 +20,7 @@ export default () => {
       <About />
       <Areas />
       <BlogPosts />
-      <Clientes />
+      {/* <Clientes /> */}
       <Subscribe />
     </Layout>
   )

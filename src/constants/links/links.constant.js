@@ -11,8 +11,8 @@ export default [
     path: "/contacto",
     text: "Contacto",
   },
-  {
-    path: "/nosotros",
-    text: "Nosotros",
-  },
+  // {
+  //   path: "/nosotros",
+  //   text: "Nosotros",
+  // },
 ]

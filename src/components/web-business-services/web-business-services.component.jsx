@@ -6,7 +6,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Title from "../../components/title/title.component"
 import SectionDescription from "../../components/section-description/section-description.component"
-import Seccion from "../../components/seccion/seccion.component"
 import Center from "../../components/center/center.component"
 import Container from "../../components/container/container.component"
 
