@@ -1,6 +1,6 @@
 import React from "react"
 
-import { FaFacebook, FaInstagram, FaEnvelope } from "react-icons/fa"
+import { FaFacebook, FaInstagram, FaEnvelope, FaWhatsapp } from "react-icons/fa"
 
 export default [
   {
@@ -14,4 +14,5 @@ export default [
     title: "instagram",
   },
   { icon: <FaEnvelope />, url: "mailto:contacto@dnlomas.mx", title: "mail" },
+  { icon: <FaWhatsapp />, url: "tel:55-8033-7121", title: "WhatsApp" },
 ]
