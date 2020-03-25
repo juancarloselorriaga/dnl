@@ -7,6 +7,7 @@
   --mainBlack: #000e19; /* #233748 */
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
+  --sectionDarkSeparator: rgba(175, 175, 175, 0.3);
   --mainBlackText: #131726;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 0.5px;

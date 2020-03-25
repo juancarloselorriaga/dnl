@@ -79,7 +79,7 @@ const Campaign = ({ className }) => {
         className="background-image"
         fluid={mainImg.childImageSharp.fluid}
       ></BackgroundImage>
-      <Seccion>
+      <Seccion darkSeparator>
         <Container padding>
           <div className="logo-container">
             <AniLink fade to="/">
@@ -94,47 +94,56 @@ const Campaign = ({ className }) => {
             />
             <Subtitle text="No dejes que el virus afecte tu negocio" />
             <div className="content-wrapper">
-              <Img fluid={laptop.childImageSharp.fluid} className="img" />
               <div className="content">
-                <h4>
-                  Que ésta epidemia no te impida continuar con tu plan de
-                  negocios y tus objetivos comerciales.
-                </h4>
-                <p>
-                  En estos tiempos de cambio y oportunidad, hay que pasar más
-                  tiempo en casa, junto a los que más queremos. La complicada
-                  situación que enfrenta el mundo requiere de ajustar muchas
-                  cosas en nuestra vida cotidiana, entre ellas, reducir
-                  radicalmente los desplazamientos de personas, para al mismo
-                  tiempo reducir la posibilidad de contagiar o de ser contagiado
-                  por el Covid-19.
-                </p>
-                <Img
-                  fluid={businessTouch.childImageSharp.fluid}
-                  className="img"
-                />
-                <p>
-                  Con la fórmula DNL Web Business continua tus objetivos
-                  comerciales en Internet, a través de estrategias integrales
-                  dirigidas a tu mercado Web, que ahora está pasando mucho
-                  tiempo en casa cuidándose, pero también destinando mucho
-                  tiempo a sus redes sociales, investigando y pensando que su
-                  negocio debe de continuar y de sobrevivir en esta época. Tu
-                  mercado Web te está buscando ahora y DNL Web Business te ayuda
-                  a aprovechar la oportunidad de encontrarlo.
-                </p>
-                <p>
-                  Las Estrategias Integrales DNL Web Business contribuyen con
-                  ese propósito, al tiempo que continúes promoviendo y
-                  comunicando al mercado el valor de tu negocio.
-                </p>
+                <div className="image-text-wrapper">
+                  <Img fluid={laptop.childImageSharp.fluid} className="img" />
+                  <div className="text-wrapper">
+                    <h4>
+                      Que ésta epidemia no te impida continuar con tu plan de
+                      negocios y tus objetivos comerciales.
+                    </h4>
+                    <p>
+                      En estos tiempos de cambio y oportunidad, hay que pasar
+                      más tiempo en casa, junto a los que más queremos. La
+                      complicada situación que enfrenta el mundo requiere de
+                      ajustar muchas cosas en nuestra vida cotidiana, entre
+                      ellas, reducir radicalmente los desplazamientos de
+                      personas, para al mismo tiempo reducir la posibilidad de
+                      contagiar o de ser contagiado por el Covid-19.
+                    </p>
+                  </div>
+                </div>
+                <div className="image-text-wrapper text-wrapper-reverse">
+                  <Img
+                    fluid={businessTouch.childImageSharp.fluid}
+                    className="img"
+                  />
+                  <div className="text-wrapper">
+                    <p>
+                      Con la fórmula DNL Web Business continua tus objetivos
+                      comerciales en Internet, a través de estrategias
+                      integrales dirigidas a tu mercado Web, que ahora está
+                      pasando mucho tiempo en casa cuidándose, pero también
+                      destinando mucho tiempo a sus redes sociales, investigando
+                      y pensando que su negocio debe de continuar y de
+                      sobrevivir en esta época. Tu mercado Web te está buscando
+                      ahora y DNL Web Business te ayuda a aprovechar la
+                      oportunidad de encontrarlo.
+                    </p>
+                    <p>
+                      Las Estrategias Integrales DNL Web Business contribuyen
+                      con ese propósito, al tiempo que continúes promoviendo y
+                      comunicando al mercado el valor de tu negocio.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </Center>
         </Container>
       </Seccion>
 
-      <Seccion>
+      <Seccion darkSeparator>
         <Container>
           <Center black>
             <div className="content-wrapper">
@@ -165,8 +174,8 @@ const Campaign = ({ className }) => {
         </Container>
       </Seccion>
 
-      <Seccion>
-        <Container>
+      <Seccion darkSeparator>
+        <Container padding>
           <Center black>
             <div className="content-wrapper">
               <div className="content">
@@ -271,6 +280,27 @@ export default styled(Campaign)`
     transform: translateY(-5px);
   }
 
-  ${breakpoint("tablet")`
+  ${breakpoint("desktop")`
+  .image-text-wrapper {
+    display: flex;
+  }
+
+  .img {
+    width: 50%;
+    padding-bottom: 15%;
+  }
+
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 0 2rem;
+  }
+
+  .text-wrapper-reverse {
+    flex-direction: row-reverse;
+  }
   `}
 `

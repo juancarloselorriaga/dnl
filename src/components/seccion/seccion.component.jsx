@@ -37,7 +37,10 @@ export default styled(Seccion)`
         : props.offWhite
         ? "var(--offWhite)"
         : ""};
-    border-bottom: 0.5px var(--mainGrey) solid;
+    border-bottom: ${props =>
+      props.darkSeparator
+        ? "1px var(--sectionDarkSeparator) solid "
+        : "0.5px var(--mainGrey) solid"};
   }
   .arched {
     display: flex;
