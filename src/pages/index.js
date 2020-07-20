@@ -12,20 +12,20 @@ import SEO from "../components/SEO/SEO.component"
 
 export default () => {
   return (
-    <div>
-      <h1 style={{ color: "white" }}>Ésta página se encuentra suspendida</h1>
-    </div>
+    <Layout>
+      <SEO title="Inicio" />
+      <Hero centered extraBottom home="true">
+        <HeroContent />
+      </Hero>
+      <About />
+      <Areas />
+      <BlogPosts />
+      {/* <Clientes /> */}
+      <Subscribe />
+    </Layout>
   )
 }
 
-// <Layout>
-// <SEO title="Inicio" />
-// <Hero centered extraBottom home="true">
-//   <HeroContent />
-// </Hero>
-// <About />
-// <Areas />
-// <BlogPosts />
-// {/* <Clientes /> */}
-// <Subscribe />
-// </Layout>
+// <div>
+// <h1 style={{ color: "white" }}>Ésta página se encuentra suspendida</h1>
+// </div>
