@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import breakpoint from "styled-components-breakpoint"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import BackgroundImage from "gatsby-background-image"
+import Img from "gatsby-image"
 
 import { FaLongArrowAltRight } from "react-icons/fa"
 
@@ -10,7 +10,9 @@ const Card = ({ className, items, textoBoton, content }) => {
   const { title, img, autor, publicado, slug } = items
   return (
     <article className={className}>
-      <BackgroundImage className="card-media" fluid={img.fluid} />
+      <div className="card-media">
+        <Img fluid={img.fluid} />
+      </div>
       <div className="card-content">
         <h5>{title}</h5>
         <p>{content}</p>
@@ -37,11 +39,13 @@ export default styled(Card)`
   width: 100%;
   .card-media,
   &:before {
-    height: 300px;
     border-top-left-radius: 11px;
     border-top-right-radius: 11px;
     overflow: hidden;
-    background-size: contain;
+  }
+
+  .card-media-image {
+    background-size: auto;
   }
 
   .card-content {
