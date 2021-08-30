@@ -30,7 +30,7 @@ const Direccion = ({ className }) => {
                   </a>
                 </div>
                 <div className="link">
-                  <a target="blank" href="tel:55-9171-2105">
+                  <a target="blank" href="tel:5591712105">
                     <FaPhone className="icon" />
                     <span>55-9171-2105 | 55-9172-1612</span>
                   </a>

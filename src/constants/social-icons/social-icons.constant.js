@@ -14,5 +14,5 @@ export default [
     title: "instagram",
   },
   { icon: <FaEnvelope />, url: "mailto:contacto@dnlomas.mx", title: "mail" },
-  { icon: <FaWhatsapp />, url: "tel:55-8033-7121", title: "WhatsApp" },
+  { icon: <FaWhatsapp />, url: "tel:5591712105", title: "WhatsApp" },
 ]
