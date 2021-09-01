@@ -1,70 +1,71 @@
-import React from "react"
-import styled from "styled-components"
-import breakpoint from "styled-components-breakpoint"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import React from 'react'
+import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
-import Seccion from "../seccion/seccion.component"
-import Center from "../center/center.component"
-import Container from "../container/container.component"
+import Seccion from '../seccion/seccion.component'
+import Center from '../center/center.component'
+import Container from '../container/container.component'
 
-import links from "../../constants/links/links.constant"
-import socialIcons from "../../constants/social-icons/social-icons.constant"
+import links from '../../constants/links/links.constant'
+import socialIcons from '../../constants/social-icons/social-icons.constant'
 
-import Logo from "../../assets/logoWhite.svg"
+import Logo from '../../assets/logo-desarrollo-de-negocios-lomas.png'
 
-const Footer = ({ className }) => {
+
+const Footer = ( { className } ) => {
   return (
-    <Seccion offWhite arched footer className={className}>
-      <Container offWhite padding>
-        <Center offWhite>
-          <div className="links">
-            {links.map((item, index) => {
-              return (
-                <AniLink key={index} fade to={item.path}>
-                  {item.text}
-                </AniLink>
-              )
-            })}
-          </div>
-          <div className="brand">
-            <img src={Logo} alt="backroads logo" />
-            <p>
-              Web Business, Sinergy y Legal a tu alcance en el desarrollo de
-              estrategias integrales para ayudar a crecer tus negocios
-            </p>
-          </div>
-          <div className="icons">
-            {socialIcons.map((item, index) => {
-              return (
-                <a
-                  key={index}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={item.title}
-                >
-                  {item.icon}
-                </a>
-              )
-            })}
-          </div>
-          <div className="copyright">
-            Desarrollo de Negocios Lomas es una marca en proceso de registro.{" "}
-            {"  "}
-            {new Date().getFullYear()}
-          </div>
-          <div className="aviso-de-privacidad">
-            <AniLink to="/aviso-de-privacidad">
-              <span>Aviso de privacidad</span>
-            </AniLink>
-          </div>
-        </Center>
-      </Container>
-    </Seccion>
+      <Seccion offWhite arched footer className={ className }>
+        <Container offWhite padding>
+          <Center offWhite>
+            <div className="links">
+              { links.map( ( item, index ) => {
+                return (
+                    <AniLink key={ index } fade to={ item.path }>
+                      { item.text }
+                    </AniLink>
+                )
+              } ) }
+            </div>
+            <div className="brand">
+              <img src={ Logo } alt="backroads logo"/>
+              <p>
+                Web Business, Sinergy y Legal a tu alcance en el desarrollo de
+                estrategias integrales para ayudar a crecer tus negocios
+              </p>
+            </div>
+            <div className="icons">
+              { socialIcons.map( ( item, index ) => {
+                return (
+                    <a
+                        key={ index }
+                        href={ item.url }
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={ item.title }
+                    >
+                      { item.icon }
+                    </a>
+                )
+              } ) }
+            </div>
+            <div className="copyright">
+              Desarrollo de Negocios Lomas es una marca en proceso de registro.{ ' ' }
+              { '  ' }
+              { new Date().getFullYear() }
+            </div>
+            <div className="aviso-de-privacidad">
+              <AniLink to="/aviso-de-privacidad">
+                <span>Aviso de privacidad</span>
+              </AniLink>
+            </div>
+          </Center>
+        </Container>
+      </Seccion>
   )
 }
 
-export default styled(Footer)`
+export default styled( Footer )`
   .aviso-de-privacidad {
     display: flex;
     justify-content: center;
@@ -97,9 +98,16 @@ export default styled(Footer)`
   .brand {
     margin: 4rem 0 1rem 0;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
   }
+  
+  .brand img {
+     height: 200px;
+    width: 200px;
+    }
+
 
   .links a {
     display: inline-block;
@@ -142,7 +150,7 @@ export default styled(Footer)`
     margin: 1rem 0 0 0;
     text-align: left;
   }
-  ${breakpoint("tablet")`
+  ${ breakpoint( 'tablet' )`
     .links {
       flex-direction: row;
       align-items: center;
@@ -151,5 +159,5 @@ export default styled(Footer)`
     .links a {
     margin: 0.5rem 3rem;
   }
-  `}
+  ` }
 `
