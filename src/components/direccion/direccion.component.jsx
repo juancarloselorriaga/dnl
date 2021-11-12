@@ -17,13 +17,13 @@ const Direccion = ({ className }) => {
             <div className="direccion">
               <h4>Dirección</h4>
               <span>
-                Perif. Blvd. Manuel Ávila Camacho 36, Lomas - Virreyes
+                Montes Urales 755, Piso 5, Lomas de Chapultepec, C.P. 11000, Alcaldía Miguel Hidalgo, Ciudad de México
               </span>
               <div className="link-wrapper">
                 <div className="link">
                   <a
                     target="blank"
-                    href="https://www.google.com/maps/place/Torre+Esmeralda+II/@19.4291218,-99.2053275,15z/data=!4m2!3m1!1s0x0:0x149bda154a37d02a?sa=X&ved=2ahUKEwjXyYaBivDkAhUORa0KHY_SC80Q_BIwC3oECAwQCw"
+                    href="https://goo.gl/maps/L3V76AW9tPhxhUoz7"
                   >
                     <FaMapMarkerAlt className="icon" />
                     <span>Nuestra oficina en Google Maps</span>
