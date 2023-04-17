@@ -15,20 +15,21 @@ import VideoSection from '../components/VideoSection/VideoSection'
 export default () => {
   return (
       <Layout>
-        <SEO title="Inicio" />
-        <Hero
-            centered
-            extraBottom
-            home="true"
-        >
-          <HeroContent />
-        </Hero>
-        <About />
-        <VideoSection videoURL="https://www.youtube.com/embed/t2qWtanTnhg" />
-        <Areas />
-        <BlogPosts />
-        {/* <Clientes /> */ }
-        <Subscribe />
+        <h1>Sitio cancelado por falta de pago.</h1>
+        {/*<SEO title="Inicio" />*/}
+        {/*<Hero*/}
+        {/*    centered*/}
+        {/*    extraBottom*/}
+        {/*    home="true"*/}
+        {/*>*/}
+        {/*  <HeroContent />*/}
+        {/*</Hero>*/}
+        {/*<About />*/}
+        {/*<VideoSection videoURL="https://www.youtube.com/embed/t2qWtanTnhg" />*/}
+        {/*<Areas />*/}
+        {/*<BlogPosts />*/}
+        {/*/!* <Clientes /> */ }*/}
+        {/*<Subscribe />*/}
       </Layout>
   )
 }
